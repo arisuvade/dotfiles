@@ -1,0 +1,223 @@
+[colors]
+#background = #263238
+background = #00
+foreground = #DFDFDF
+primary = #00BCD4
+red = #FF5250
+green = #43a047
+yellow = #fdd835
+orange = #FF8C00
+
+[bar/bar1]
+width = 100%
+height = 22
+offset-x = 1%
+offset-y = 1%
+radius = 0.0
+fixed-center = true
+bottom = false
+
+; dpi = 96
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3pt
+
+; border-size = 4pt
+; border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 2
+
+separator =
+separator-foreground = ${colors.disabled}
+
+font-0 = "Roboto Medium:size=10.5;2"
+font-1 = "Font Awesome 6 Free Solid:size=10.5;1"
+font-2 = "Font Awesome 6 Brands:size=10.5;1"
+font-3 = "Font Awesome 6 Brands Regular:size=10.5;1"
+font-4 = "Font Awesome 6 Free:size=10.5;1"
+font-5 = "Font Awesome v4 Compatibility:size=10.5;1"
+font-6 = "Font Awesome v4 Compatibility Regular:size=10.5;1"
+font-7 = "Font Awesome 6 Free Regular:size=10.5;1"
+
+
+modules-left = i3 xwindow
+modules-right = memory cpu temperature upt wlan battery backlight pulseaudio date time
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+enable-ipc = true
+
+tray-position = none
+
+wm-restack = i3
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+; override-redirect = true
+
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+show-urgent = true
+strip-wsnumbers = true
+index-sort = true
+enable-scroll = true
+wrapping-scroll = false
+fuzzy-match = true
+format = <label-state> <label-mode>
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-background = ${colors.background}
+label-focused = %icon%
+label-focused-foreground = ${colors.orange}
+label-focused-background = ${colors.background}
+;label-focused-underline = ${colors.primary}
+label-focused-padding = 2
+label-unfocused = %icon%
+label-unfocused-padding = 2
+label-unfocused-foreground = ${colors.primary}
+label-unfocused-background = ${colors.background}
+label-urgent = %icon%
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.background}
+label-urgent-padding = 2
+ws-icon-0 = "1;"
+ws-icon-1 = "2;"
+ws-icon-2 = "3;"
+ws-icon-3 = "4;"
+ws-icon-4 = "5;"
+ws-icon-5 = "6;"
+ws-icon-6 = "7;"
+ws-icon-7 = "8;8"
+ws-icon-8 = "9;9"
+ws-icon-9 = "10;10"
+
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:50:...%
+label-foreground = ${colors.primary}
+
+
+[module/memory]
+type = internal/memory
+interval = 2
+warn-percentage = 80
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+#label = %percentage_used:2%%
+label = %mb_used%/%mb_total% (%percentage_used%%)
+
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %percentage:2%%
+
+
+[module/temperature]
+type = internal/temperature
+interval = 0.5
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+base-temperature = 20
+warn-temperature = 60
+
+
+[module/upt] 
+type = custom/script
+exec = uptime --pretty | cut -c 4- | sed "s/^/%{F#00BCD4} %{F-} /"
+interval = 60
+
+
+[network-base]
+type = internal/network
+interval = 5
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
+
+[module/wlan]
+inherit = network-base
+interface-type = wireless
+label-connected = %{F#00BCD4} %{F-}%{A1:nm-connection-editor:}%essid%%{A}  %{F#00BCD4} %{F-}%downspeed:9%  %{F#00BCD4}%{F-}%upspeed:9%
+
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ADP1
+full-at = 101
+label-charging = %{F#00BCD4}  %{F-}%percentage%%
+label-discharging = %{F#00BCD4}  %{F-}%percentage%%
+label-full = %{F#00BCD4}  %{F-}%percentage%%
+label-low = %{F#00BCD4}  %{F-f}%percentage%%
+
+
+[module/backlight]
+type = internal/backlight
+card = intel_backlight
+use-actual-brightness = true
+enable-scroll = true
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+label = %percentage%%
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume-prefix = " "
+format-volume-prefix-foreground = ${colors.primary}
+format-volume = <label-volume>
+label-volume = %percentage%%
+label-muted =  MUTED
+label-muted-foreground = ${colors.primary}
+
+
+[module/date]
+type = internal/date
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+interval = 1
+date = %b %d %a
+#date-alt = %Y-%m-%d
+
+
+[module/time]
+type = internal/date
+interval = 1
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+date = %I:%M %p %{F#FF8C00}
+#date-alt = %Y-%m-%d
+label = %date%
+label-foreground = ${colors.foreground}
+
+
+[settings]
+screenchange-reload = true
+pseudo-transparency = true
+
+
+
+
+
+
+
+
+
+
+
+
+; vim:ft=dosini
