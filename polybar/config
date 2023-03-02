@@ -1,66 +1,49 @@
 [colors]
-#background = #263238
 background = #00
 foreground = #DFDFDF
 primary = #00BCD4
-red = #FF5250
-green = #43a047
-yellow = #fdd835
-orange = #FF8C00
+
 
 [bar/bar1]
 width = 100%
-height = 22
+height = 20
 offset-x = 1%
 offset-y = 1%
 radius = 0.0
 fixed-center = true
 bottom = false
-
-; dpi = 96
-
 background = ${colors.background}
 foreground = ${colors.foreground}
 
+
+separator = |
+separator-foreground = ${colors.background}
 line-size = 3pt
-
-; border-size = 4pt
-; border-color = #00000000
-
 padding-left = 0
-padding-right = 0
-
+padding-right = 1
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
-separator =
-separator-foreground = ${colors.disabled}
 
 font-0 = "Roboto Medium:size=10.5;2"
-font-1 = "Font Awesome 6 Free Solid:size=10.5;1"
-font-2 = "Font Awesome 6 Brands:size=10.5;1"
-font-3 = "Font Awesome 6 Brands Regular:size=10.5;1"
-font-4 = "Font Awesome 6 Free:size=10.5;1"
-font-5 = "Font Awesome v4 Compatibility:size=10.5;1"
-font-6 = "Font Awesome v4 Compatibility Regular:size=10.5;1"
-font-7 = "Font Awesome 6 Free Regular:size=10.5;1"
+font-1 = "Font Awesome 6 Free Solid:size=10.5;2"
+font-2 = "Font Awesome 6 Brands:size=12;2"
+font-3 = "Font Awesome 6 Brands Regular:size=12;2"
 
 
-modules-left = i3 xwindow
-modules-right = memory cpu temperature upt wlan battery backlight pulseaudio date time
+modules-left = i3
+modules-center = clock
+modules-right = volume brightness
+
 
 cursor-click = pointer
-cursor-scroll = ns-resize
-
+cursor-scroll = default
 enable-ipc = true
-
 tray-position = none
-
 wm-restack = i3
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
+; scroll-up = i3wm-wsprev
+; scroll-down = i3wm-wsnext
 
-; override-redirect = true
 
 [module/i3]
 type = internal/i3
@@ -72,100 +55,68 @@ enable-scroll = true
 wrapping-scroll = false
 fuzzy-match = true
 format = <label-state> <label-mode>
+
 label-mode = %mode%
 label-mode-padding = 2
 label-mode-background = ${colors.background}
-label-focused = %icon%
-label-focused-foreground = ${colors.orange}
+
+label-focused = %name%
+label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-;label-focused-underline = ${colors.primary}
+label-focused-underline = ${colors.primary}
 label-focused-padding = 2
-label-unfocused = %icon%
+
+label-unfocused = %name%
 label-unfocused-padding = 2
-label-unfocused-foreground = ${colors.primary}
-label-unfocused-background = ${colors.background}
-label-urgent = %icon%
-label-urgent-foreground = ${colors.foreground}
-label-urgent-background = ${colors.background}
-label-urgent-padding = 2
-ws-icon-0 = "1;"
-ws-icon-1 = "2;"
-ws-icon-2 = "3;"
-ws-icon-3 = "4;"
-ws-icon-4 = "5;"
-ws-icon-5 = "6;"
-ws-icon-6 = "7;"
-ws-icon-7 = "8;8"
-ws-icon-8 = "9;9"
-ws-icon-9 = "10;10"
 
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:50:...%
-label-foreground = ${colors.primary}
+label = %title:0:30:...%
+label-foreground = ${colors.foreground}
 
 
-[module/memory]
-type = internal/memory
-interval = 2
-warn-percentage = 80
-format-prefix = " "
-format-prefix-foreground = ${colors.primary}
-#label = %percentage_used:2%%
-label = %mb_used%/%mb_total% (%percentage_used%%)
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar>
+label = BL
+
+bar-width = 10
+bar-indicator = |
+bar-indicator-foreground = #fff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #9f78e1
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = ${colors.foreground-alt}
 
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.primary}
-label = %percentage:2%%
+bar-progress-width = 45
+bar-progress-format = %{A4:mpdseek+2: A5:mpdseek-2:}%fill%%indicator%%empty%%{A A}
+bar-progress-indicator = |
+bar-progress-indicator-foreground = #ff
+bar-progress-indicator-font = 3
+bar-progress-fill = ─
+bar-progress-fill-foreground = #bb
+bar-progress-fill-font = 3
+bar-progress-empty = ─
+bar-progress-empty-font = 3
+bar-progress-empty-foreground = #44
 
 
-[module/temperature]
-type = internal/temperature
-interval = 0.5
-format-prefix = " "
-format-prefix-foreground = ${colors.primary}
-thermal-zone = 0
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
-base-temperature = 20
-warn-temperature = 60
-
-
-[module/upt] 
-type = custom/script
-exec = uptime --pretty | cut -c 4- | sed "s/^/%{F#00BCD4} %{F-} /"
+[module/clock]
+type = internal/date
 interval = 60
+date = %{F#00BCD4} %{F-}%I:%M %p
+date-alt = %{F#00BCD4} %{F-}%b %d %a
+label = %date%
+label-foreground = ${colors.foreground}
 
 
-[network-base]
-type = internal/network
-interval = 5
-format-connected = <label-connected>
-format-disconnected = <label-disconnected>
-label-disconnected = %{F#F0C674}%ifname%%{F#707880} disconnected
-
-[module/wlan]
-inherit = network-base
-interface-type = wireless
-label-connected = %{F#00BCD4} %{F-}%{A1:nm-connection-editor:}%essid%%{A}  %{F#00BCD4} %{F-}%downspeed:9%  %{F#00BCD4}%{F-}%upspeed:9%
-
-
-[module/battery]
-type = internal/battery
-battery = BAT1
-adapter = ADP1
-full-at = 101
-label-charging = %{F#00BCD4}  %{F-}%percentage%%
-label-discharging = %{F#00BCD4}  %{F-}%percentage%%
-label-full = %{F#00BCD4}  %{F-}%percentage%%
-label-low = %{F#00BCD4}  %{F-f}%percentage%%
-
-
-[module/backlight]
+[module/brightness]
 type = internal/backlight
 card = intel_backlight
 use-actual-brightness = true
@@ -175,49 +126,31 @@ format-prefix-foreground = ${colors.primary}
 label = %percentage%%
 
 
-[module/pulseaudio]
+[module/volume]
 type = internal/pulseaudio
-format-volume-prefix = " "
-format-volume-prefix-foreground = ${colors.primary}
 format-volume = <label-volume>
-label-volume = %percentage%%
-label-muted =  MUTED
-label-muted-foreground = ${colors.primary}
+label-volume = %{F#00BCD4}  %{F-}%percentage%%
+label-muted = %{F#00BCD4} %{F-}0%
+click-right = $TERMINAL pavucontrol &
 
 
-[module/date]
-type = internal/date
-format-prefix = " "
-format-prefix-foreground = ${colors.primary}
-interval = 1
-date = %b %d %a
-#date-alt = %Y-%m-%d
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ADP1
+full-at = 98
+label-charging = %{F#FF8C00} %{F-}%percentage%%
+label-discharging = %{F#FF8C00} %{F-}%percentage%%
+label-full = %{F#FF8C00} %{F-}%percentage%%
 
 
-[module/time]
-type = internal/date
-interval = 1
-format-prefix = " "
-format-prefix-foreground = ${colors.primary}
-date = %I:%M %p %{F#FF8C00}
-#date-alt = %Y-%m-%d
-label = %date%
-label-foreground = ${colors.foreground}
+[module/youtube]
+type = custom/script
+interval = 3600
+click-left = "brave -disk-cache-dir=Documents --disk-cache-size=104857600 -window https://youtube.com &"
+exec = echo "%{F#00BCD4}"
 
 
 [settings]
 screenchange-reload = true
 pseudo-transparency = true
-
-
-
-
-
-
-
-
-
-
-
-
-; vim:ft=dosini
