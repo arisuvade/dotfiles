@@ -1,0 +1,45 @@
+# Theme
+include /usr/share/nano/sh.nanorc
+
+include "/usr/share/nano/nanorc.nanorc"
+include "/usr/share/nano/sh.nanorc"
+include "/usr/share/nano/python.nanorc"
+include "/usr/share/nano/java.nanorc"
+
+include "/usr/share/nano/asm.nanorc"
+include "/usr/share/nano/awk.nanorc"
+include "/usr/share/nano/xml.nanorc"
+include "/usr/share/nano/ruby.nanorc"
+include "/usr/share/nano/perl.nanorc"
+include "/usr/share/nano/groff.nanorc"
+include "/usr/share/nano/man.nanorc"
+include "/usr/share/nano/patch.nanorc"
+include "/usr/share/nano/tex.nanorc"
+include "/usr/share/nano/tcl.nanorc"
+include "/usr/share/nano/php.nanorc"
+include "/usr/share/nano/html.nanorc"
+include "/usr/share/nano/css.nanorc"
+include "/usr/share/nano/c.nanorc"
+
+# Line numbers
+set linenumbers
+
+# Auto-indentation
+set autoindent
+
+# Tab size
+set tabsize 4
+set tabstospaces
+
+# Enable mouse
+set mouse
+
+# dunno
+set trimblanks
+set constantshow
+set titlecolor black,cyan
+set keycolor cyan
+set functioncolor cyan
+set numbercolor yellow
+set boldtext
+set brackets ""')>]}"
