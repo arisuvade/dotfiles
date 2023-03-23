@@ -117,3 +117,16 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 
 pokemon-colorscripts --no-title -r
+
+# Aliases
+
+# Files rename
+alias rename='~/scripts/file_rename.sh $1 $2'
+
+# Auto files mover
+alias move='~/scripts/files_mover.sh'
+
+# ChatGPT
+export OPENAI_API_KEY=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
+alias chatgpt='source ~/Documents/commandline-chatgpt/chatgpt_cli/bin/activate'
+alias ask='sgpt --chat $(whoami)'
