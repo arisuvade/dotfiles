@@ -19,8 +19,5 @@ style = 'bold red'
 symbol = ' '
 style = 'bold yellow'
 
-[git_branch]
-symbol = " "
-
 [cmd_duration]
 style = "bold italic bold yellow"
