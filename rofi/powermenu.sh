@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Current Theme
-dir="$HOME/.config/rofi/powermenu/"
-theme='theme'
+dir="$HOME/.config/rofi/powermenu/type-1"
+theme='style-1'
 
 # Options
 shutdown=' Shutdown'
@@ -16,7 +16,7 @@ rofi_cmd() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$reboot\n$shutdown" | rofi_cmd
+	echo -e "$shutdown\n$reboot" | rofi_cmd
 }
 
 # Execute Command
