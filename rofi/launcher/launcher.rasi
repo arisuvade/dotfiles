@@ -53,13 +53,13 @@ configuration {
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    north;
-    anchor:                      center;
+    location:                    northwest;
+    anchor:                      west;
     fullscreen:                  false;
     height:                      270px;
     width:                       300px;
     x-offset:                    0px;
-    y-offset:                    350px;
+    y-offset:                    155px;
 
     /* properties for all widgets */
     enabled:                     true;
