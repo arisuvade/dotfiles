@@ -52,6 +52,9 @@ bindsym Delete exec --no-startup-id bash /home/aries/.config/rofi/powermenu/type
 # wifimenu
 bindsym Insert exec bash /home/aries/.config/rofi/powermenu/type-1/wifimenu.sh
 
+# Touchpad on/off
+bindsym Pause exec ~/Documents/scripts/touchpad-automation/on-off-touchpad.sh
+
 # kill window
 bindsym $mod+q kill
 
@@ -132,7 +135,7 @@ bindsym $mod+r mode ""
 
 # display resolution
 exec_always xrandr --output eDP-1 --mode 1592x892_60.00
- 
+
 # display wallpaper
 exec_always feh --bg-fill /home/aries/Pictures/Wallpapers/arch.jpg
 #exec_always feh --bg-fill /home/aries/Pictures/Wallpapers/ai2.jpg
@@ -142,7 +145,7 @@ exec_always xinput --set-prop 10  'libinput Accel Speed' -0.95
 
 # disable touchpad
 #exec_always synclient TouchpadOff=1
-exec_always ~/Documents/scripts/automate_touchpad.sh
+exec_always ~/Documents/scripts/touchpad-automation/automate-touchpad.sh
 
 # pulseaudio echo cancellation
 exec_always pulseaudio -k
