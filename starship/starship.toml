@@ -6,8 +6,8 @@ disabled = true
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 	
-# Replace the '❯' symbol in the prompt with '➜'
-[character] # The name of the module we are configuring is 'character'
+# Symbols: '❯', '➜', '❱', ''
+[character]
 success_symbol = '[❱❱❱](bold green)'
 error_symbol = '[❱❱❱](bold red)'
 
@@ -18,6 +18,3 @@ style = 'bold red'
 [python]
 symbol = ' '
 style = 'bold yellow'
-
-[cmd_duration]
-style = "bold italic bold yellow"
