@@ -2,10 +2,10 @@ set $mod Mod4
 set $alt Mod1
 
 # polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id $HOME/.config/polybar/launch.sh
 
 # picom
-exec_always picom
+exec --no-startup-id picom
 
 # font for window titles.
 font pango:Roboto Medium 10
@@ -23,8 +23,8 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 
 # adjust brightness
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -52,8 +52,8 @@ bindsym Delete exec --no-startup-id bash /home/aries/.config/rofi/powermenu/type
 # wifimenu
 bindsym Insert exec bash /home/aries/.config/rofi/powermenu/type-1/wifimenu.sh
 
-# Touchpad on/off
-bindsym Pause exec ~/Documents/scripts/touchpad-automation/on-off-touchpad.sh
+# touchpad on/off
+bindsym Pause exec --no-startup-id ~/Documents/scripts/touchpad-automation/on-off-touchpad.sh
 
 # kill window
 bindsym $mod+q kill
@@ -133,31 +133,28 @@ mode "" {
 }
 bindsym $mod+r mode ""
 
-# display resolution
-exec_always xrandr --output eDP-1 --mode 1592x892_60.00
+# change display resolution
+exec --no-startup-id xrandr --output eDP-1 --mode 1592x892_60.00
 
-# display wallpaper
-exec_always feh --bg-fill /home/aries/Pictures/Wallpapers/arch.jpg
-#exec_always feh --bg-fill /home/aries/Pictures/Wallpapers/ai2.jpg
+# change wallpaper
+exec --no-startup-id feh --bg-fill /home/aries/Pictures/Wallpapers/arch.jpg
 
 # pointer speed
-exec_always xinput --set-prop 10  'libinput Accel Speed' -0.95
+exec --no-startup-id ~/Documents/scripts/pointer-speed.sh
 
-# disable touchpad
-#exec_always synclient TouchpadOff=1
-exec_always ~/Documents/scripts/touchpad-automation/automate-touchpad.sh
+# disable touchpad if there is a mouse
+exec --no-startup-id ~/Documents/scripts/touchpad-automation/automate-touchpad.sh
 
 # pulseaudio echo cancellation
-exec_always pulseaudio -k
+exec --no-startup-id pulseaudio -k
 
-# remove title bars
-# new_window 1pixel
+# change title bars
 default_border pixel 3
 
 # window gaps
 hide_edge_borders smart
-gaps inner 5
-gaps outer 0
+gaps inner 3
+gaps outer 1
 smart_gaps on
 
 # frame color
