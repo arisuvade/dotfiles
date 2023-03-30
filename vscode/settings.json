@@ -3,17 +3,20 @@
     "editor.fontSize": 17,
     "editor.fontFamily": "JetBrains Mono",
     "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontSize": 14,
     "workbench.iconTheme": "material-icon-theme",
+    "breadcrumbs.enabled": false,
+    "editor.wordWrap": "on",
     "editor.tokenColorCustomizations": {
       "textMateRules": [
         {
           "scope": [
-            //following will be in italic (=FlottFlott)
             "comment",
-            "entity.name.type.class", //class names
-            "keyword", //import, export, return…
-            "storage.modifier", //static keyword
-            "storage.type", //class keyword
+            "entity.name.type.class",
+            "keyword",
+            "storage.modifier",
+            "storage.type",
             "support.class.builtin",
             "keyword.control",
             "constant.language",
@@ -21,12 +24,11 @@
             "entity.name.method"
           ],
           "settings": {
-            "fontStyle": "italic"
+            "fontStyle": "bold italic"
           }
         },
         {
           "scope": [
-            //following will be excluded from italics (VSCode has some defaults for italics)
             "invalid",
             "keyword.operator",
             "constant.numeric.css",
@@ -40,49 +42,16 @@
         }
       ]
     },
-    "code-runner.clearPreviousOutput": true,
-    "code-runner.saveFileBeforeRun": true,
-    "code-runner.showExecutionMessage": false,
-    "code-runner.runInTerminal": false,
-    "terminal.integrated.fontFamily": "JetBrains Mono",
-    "terminal.integrated.fontSize": 14,
     "explorer.confirmDelete": false,
     "python.formatting.provider": "black",
     "editor.formatOnSave": true,
-    "smartsemicolon.autoLineChange": false,
     "editor.minimap.enabled": false,
     "editor.codeLens": false,
     "java.debug.settings.enableRunDebugCodeLens": false,
     "editor.guides.bracketPairs": true,
     "workbench.startupEditor": "none",
     "explorer.confirmDragAndDrop": false,
-    "[python]": {
-        "editor.formatOnType": true
-    },
-    {
-        "shellcheck.enable": true,
-        "shellcheck.enableQuickFix": true,
-        "shellcheck.run": "onSave",
-        "shellcheck.executablePath": "", // Priority: user defined > bundled shellcheck binary > "shellcheck"
-        "shellcheck.exclude": [],
-        "shellcheck.customArgs": [],
-        "shellcheck.ignorePatterns": {
-          "**/*.xonshrc": true,
-          "**/*.xsh": true,
-          "**/*.zsh": true,
-          "**/*.zshrc": true,
-          "**/zshrc": true,
-          "**/*.zprofile": true,
-          "**/zprofile": true,
-          "**/*.zlogin": true,
-          "**/zlogin": true,
-          "**/*.zlogout": true,
-          "**/zlogout": true,
-          "**/*.zshenv": true,
-          "**/zshenv": true,
-          "**/*.zsh-theme": true
-        },
-        "shellcheck.ignoreFileSchemes": ["git", "gitfs", "output"]
-    },
-    
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.list.smoothScrolling": true,
+    "editor.smoothScrolling": true,
 }
