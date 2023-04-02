@@ -1,11 +1,9 @@
 # Theme
-include /usr/share/nano/sh.nanorc
-
+include "/usr/share/nano/sh.nanorc"
 include "/usr/share/nano/nanorc.nanorc"
 include "/usr/share/nano/sh.nanorc"
 include "/usr/share/nano/python.nanorc"
 include "/usr/share/nano/java.nanorc"
-
 include "/usr/share/nano/asm.nanorc"
 include "/usr/share/nano/awk.nanorc"
 include "/usr/share/nano/xml.nanorc"
@@ -31,15 +29,11 @@ set autoindent
 set tabsize 4
 set tabstospaces
 
-# Enable mouse
-set mouse
-
-# dunno
+# Random
 set trimblanks
 set constantshow
 set titlecolor black,cyan
 set keycolor cyan
 set functioncolor cyan
-set numbercolor yellow
 set boldtext
 set brackets ""')>]}"
