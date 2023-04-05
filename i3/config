@@ -22,10 +22,10 @@ exec --no-startup-id xrandr --output eDP-1 --mode 1592x892_60.00
 exec --no-startup-id feh --bg-fill /home/aries/Pictures/Wallpapers/arch.jpg
 
 # Change mouse pointer speed.
-exec --no-startup-id ~/Documents/github-repos/scripts/mouse-pointer-speed.sh
+exec --no-startup-id ~/github/scripts/mouse-pointer-speed.sh
 
 # Disable touchpad if there is a mouse.
-exec --no-startup-id ~/Documents/github-repos/scripts/touchpad-automation/automate-touchpad.sh
+exec --no-startup-id ~/github/scripts/touchpad-automation/automate-touchpad.sh
 
 # Pulseaudio echo cancellation.
 exec --no-startup-id pulseaudio -k
@@ -34,7 +34,7 @@ exec --no-startup-id pulseaudio -k
 bindsym Print exec xfce4-screenshooter -f -s /home/aries/Pictures/Screenshots/Screenshot_"$(date +%Y-%m-%d_%H-%M-%S)".png
 
 # Toggle touchpad on/off.
-bindsym Pause exec --no-startup-id ~/Documents/github-repos/scripts/touchpad-automation/on-off-touchpad.sh
+bindsym Pause exec --no-startup-id ~/github/scripts/touchpad-automation/on-off-touchpad.sh
 
 # Open power menu.
 bindsym Delete exec --no-startup-id bash /home/aries/.config/rofi/powermenu/type-1/powermenu.sh
@@ -102,8 +102,8 @@ bindsym $mod+r mode ""
 
 # Windows settings.
 default_border pixel 3
-gaps inner 3
-gaps outer 1
+gaps inner 4
+gaps outer 0
 smart_gaps on
 hide_edge_borders smart
 client.focused		#00BCD4 #000000 #DCDCDC #00BCD4 #00BCD4 #00BCD4
