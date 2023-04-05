@@ -61,5 +61,5 @@
   "terminal.integrated.smoothScrolling": true,
   "editor.cursorBlinking": "smooth",
   "git.autofetch": true,
-  "git.confirmSync": false,
+  "git.confirmSync": false
 }
