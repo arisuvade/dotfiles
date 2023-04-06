@@ -11,6 +11,10 @@ disabled = true
 success_symbol = '[❱❱❱](bold green)'
 error_symbol = '[❱❱❱](bold red)'
 
+[directory]
+truncation_length = 1
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+
 [java]
 symbol = ' '
 style = 'bold red'
