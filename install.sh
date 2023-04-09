@@ -43,27 +43,29 @@ if [[ $PULSEAUDIO_OPTION == "y" ]]; then
     sudo cp /pulseaudio/default.pa /etc/pulse/
 fi
 
-# TODO
+# Rofi
+read -r "Do you want to add rofi config? (y/n) " ROFI_OPTION
+if [[ $ROFI_OPTION == "y" ]]; then
+    mkdir -p ~/.config/rofi/
+    cp /rofi/colors/ ~/.config/rofi/
+    cp /rofi/launchers/ ~/.config/rofi/
+    cp /rofi/powermenu/ ~/.config/rofi/
+    cp /rofi/shared/ ~/.config/rofi/
+    cp /rofi/config.rasi ~/.config/rofi/
+    cp /rofi/powermenu.sh ~/.config/rofi/
+    cp /rofi/wifimenu.sh ~/.config/rofi/
+fi
 
-# # Rofi
-# read -r "Do you want to add alacritty config? (y/n) " ALACRITTY_OPTION
-# if [[ $ALACRITTY_OPTION == "y" ]]; then
-#     mkdir -p ~/.config/alacritty/
-#     cp /alacritty/alacritty.yml ~/.config/alacritty/
-# fi
+# Starship
+read -r "Do you want to add starship config? (y/n) " STARSHIP_OPTION
+if [[ $STARSHIP_OPTION == "y" ]]; then
+    cp /starship/starship.toml ~/.config/
+fi
 
 
-# # Starship
-# read -r "Do you want to add alacritty config? (y/n) " ALACRITTY_OPTION
-# if [[ $ALACRITTY_OPTION == "y" ]]; then
-#     mkdir -p ~/.config/alacritty/
-#     cp /alacritty/alacritty.yml ~/.config/alacritty/
-# fi
-
-
-# # VSCode
-# read -r "Do you want to add alacritty config? (y/n) " ALACRITTY_OPTION
-# if [[ $ALACRITTY_OPTION == "y" ]]; then
-#     mkdir -p ~/.config/alacritty/
-#     cp /alacritty/alacritty.yml ~/.config/alacritty/
-# fi
+# VSCode
+read -r "Do you want to add vscode config? (y/n) " VSCODE_OPTION
+if [[ $VSCODE_OPTION == "y" ]]; then
+    mkdir -p ~/.config/Code/User/
+    cp /vscode/settings.json ~/.config/Code/User/
+fi
