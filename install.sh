@@ -14,32 +14,29 @@ if [[ $I3_OPTION == "y" ]]; then
     cp /i3/config ~/.config/i3/
 fi
 
+# Neofetch
+read -r "Do you want to add neofetch config? (y/n) " NEOFETCH_OPTION
+if [[ $NEOFETCH_OPTION == "y" ]]; then
+    mkdir -p ~/.config/neofetch/
+    cp /neofetch/config.conf ~/.config/neofetch/
+    cp /neofetch/ascii.txt ~/.config/neofetch/
+fi
+
+# Picom
+read -r "Do you want to add picom config? (y/n) " PICOM_OPTION
+if [[ $PICOM_OPTION == "y" ]]; then
+    cp /picom/picom.conf ~/.config/
+fi
+
+# Polybar
+read -r "Do you want to add alacritty config? (y/n) " POLYBAR_OPTION
+if [[ $POLYBAR_OPTION == "y" ]]; then
+    mkdir -p ~/.config/polybar/
+    cp /polybar/config ~/.config/polybar/
+    cp /polybar/launch.sh ~/.config/polybar/
+fi
 
 # TODO
-
-# # Neofetch
-# read -r "Do you want to add alacritty config? (y/n) " ALACRITTY_OPTION
-# if [[ $ALACRITTY_OPTION == "y" ]]; then
-#     mkdir -p ~/.config/alacritty/
-#     cp /alacritty/alacritty.yml ~/.config/alacritty/
-# fi
-
-
-# # Picom
-# read -r "Do you want to add alacritty config? (y/n) " ALACRITTY_OPTION
-# if [[ $ALACRITTY_OPTION == "y" ]]; then
-#     mkdir -p ~/.config/alacritty/
-#     cp /alacritty/alacritty.yml ~/.config/alacritty/
-# fi
-
-
-# # Polybar
-# read -r "Do you want to add alacritty config? (y/n) " ALACRITTY_OPTION
-# if [[ $ALACRITTY_OPTION == "y" ]]; then
-#     mkdir -p ~/.config/alacritty/
-#     cp /alacritty/alacritty.yml ~/.config/alacritty/
-# fi
-
 
 # # Pulseaudio
 # read -r "Do you want to add alacritty config? (y/n) " ALACRITTY_OPTION
