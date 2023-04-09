@@ -25,7 +25,7 @@ window {
     fullscreen:                  false;
     width:                       136px;
     x-offset:                    0px;
-    y-offset:                    75px;
+    y-offset:                    72px;
 
     /* properties for all widgets */
     enabled:                     true;
