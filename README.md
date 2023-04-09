@@ -5,7 +5,21 @@ This repository contains a collection of dotfiles and configuration files used b
 The repository is organized into subdirectories for each application or tool. Within each subdirectory, there are individual files for each configuration setting. Each file has a clear and descriptive name to help users quickly identify its purpose.
 
 ## Usage
-To use the dotfiles and configuration files in this repository, simply clone the repository to your local machine and copy the files to their respective locations. Instructions for installing and using the files can be found in the README file located in the root directory of the repository.
+|   Files    |       Location       |
+|  :-----    |      :--------:      |
+| Alacritty  | ~/.config/alacritty/ |
+| I3         | ~/.config/i3/        |
+| Picom      | ~/.config/           |
+| Polybar    | ~/.config/polybar/   |
+| Pulseaudio | /etc/pulse/          |
+| Rofi       | ~/.config/rofi/      |
+| Starship   | ~/.config/           |
+| VSCode     | ~/.config/Code/User/ |
+| Bash       | $HOME                |
+| Nano       | $HOME                |
+| Profile    | $HOME                |
+| Xinit      | $HOME                |
+| Zsh        | $HOME                |
 
 ## Features
 This repository contains a variety of configuration files and dotfiles that customize the behavior and appearance of various tools and applications. Some of the key features include:
