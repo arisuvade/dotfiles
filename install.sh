@@ -36,15 +36,14 @@ if [[ $POLYBAR_OPTION == "y" ]]; then
     cp /polybar/launch.sh ~/.config/polybar/
 fi
 
+# Pulseaudio
+read -r "Do you want to add pulseaudio config? (y/n) " PULSEAUDIO_OPTION
+if [[ $PULSEAUDIO_OPTION == "y" ]]; then
+    sudo mkdir -p /etc/pulse/
+    sudo cp /pulseaudio/default.pa /etc/pulse/
+fi
+
 # TODO
-
-# # Pulseaudio
-# read -r "Do you want to add alacritty config? (y/n) " ALACRITTY_OPTION
-# if [[ $ALACRITTY_OPTION == "y" ]]; then
-#     mkdir -p ~/.config/alacritty/
-#     cp /alacritty/alacritty.yml ~/.config/alacritty/
-# fi
-
 
 # # Rofi
 # read -r "Do you want to add alacritty config? (y/n) " ALACRITTY_OPTION
