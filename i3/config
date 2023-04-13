@@ -21,9 +21,6 @@ exec --no-startup-id xrandr --output eDP-1 --mode 1592x892_60.00
 # Set wallpaper.
 exec --no-startup-id feh --bg-fill /home/aries/Pictures/Wallpapers/arch.jpg
 
-# Change mouse pointer speed.
-exec --no-startup-id ~/GitHub/scripts/mouse-pointer-speed.sh
-
 # Disable touchpad if there is a mouse.
 exec --no-startup-id ~/GitHub/scripts/touchpad-automation/automate-touchpad.sh
 
@@ -39,7 +36,7 @@ bindsym Pause exec --no-startup-id ~/GitHub/scripts/touchpad-automation/on-off-t
 # Open power menu.
 bindsym Delete exec --no-startup-id bash /home/aries/.config/rofi/powermenu/type-1/powermenu.sh
 
-# Open wifi menu. 
+# Open wifi menu.
 bindsym Insert exec bash /home/aries/.config/rofi/powermenu/type-1/wifimenu.sh
 
 # Application keybindings.
