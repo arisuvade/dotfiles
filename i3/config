@@ -1,4 +1,4 @@
-# Set modifier keys. Super key and alt.
+e# Set modifier keys. Super key and alt.
 set $mod Mod4
 set $alt Mod1
 
@@ -16,7 +16,7 @@ exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id picom
 
 # Set display resolution.
-exec --no-startup-id xrandr --output eDP-1 --mode 1592x892_60.00
+exec --no-startup-id xrandr --output eDP-1 --mode 1528x859_60.00
 
 # Set wallpaper.
 exec --no-startup-id feh --bg-fill /home/aries/Pictures/Wallpapers/arch.jpg
@@ -36,7 +36,7 @@ bindsym Pause exec --no-startup-id ~/GitHub/scripts/touchpad-automation/on-off-t
 # Open power menu.
 bindsym Delete exec --no-startup-id bash /home/aries/.config/rofi/powermenu/type-1/powermenu.sh
 
-# Open wifi menu.
+# Open wifi menu. 
 bindsym Insert exec bash /home/aries/.config/rofi/powermenu/type-1/wifimenu.sh
 
 # Application keybindings.
