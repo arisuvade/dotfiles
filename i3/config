@@ -1,4 +1,4 @@
-e# Set modifier keys. Super key and alt.
+# Set modifier keys. Super key and alt.
 set $mod Mod4
 set $alt Mod1
 
