@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "../GitHub/dotfiles"
+		},
+		{
+			"path": "../GitHub/message-spammer"
 		}
 	]
 }
