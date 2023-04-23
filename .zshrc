@@ -7,3 +7,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Starship terminal prompt
 eval "$(starship init zsh)"
+
+alias mouse='GitHub/scripts/mouse-pointer-speed.sh'
