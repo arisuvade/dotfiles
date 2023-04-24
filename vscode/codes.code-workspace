@@ -10,7 +10,10 @@
 			"path": "../GitHub/dotfiles"
 		},
 		{
-			"path": "../GitHub/message-spammer"
+			"path": "../GitHub/pyblaster"
+		},
+		{
+			"path": "../GitHub/pyclicx"
 		}
 	]
 }
