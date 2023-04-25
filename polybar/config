@@ -27,7 +27,7 @@ font-2 = "Font Awesome 6 Brands:size=12;1.5"
 font-3 = "Font Awesome 6 Brands Regular:size=12;1.5"
 
 modules-left = i3
-modules-center = clock
+modules-center = date
 modules-right = volume brightness
 cursor-click = pointer
 cursor-scroll = default
@@ -56,11 +56,10 @@ label-focused-padding = 2
 label-unfocused = %name%
 label-unfocused-padding = 2
 
-[module/clock]
+[module/date]
 type = internal/date
 interval = 60
-date = %{F#00BCD4} %{F-}%I:%M %p
-date-alt = %{F#00BCD4} %{F-}%b %d %a
+date = %a %b %d  %I:%M %p
 label = %date%
 label-foreground = ${colors.foreground}
 
