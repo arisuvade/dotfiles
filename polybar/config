@@ -59,7 +59,7 @@ label-unfocused-padding = 2
 [module/date]
 type = internal/date
 interval = 60
-date = %a %b %d  %I:%M %p
+date = %{F#00BCD4} %{F-}%a %b %d  %{F#00BCD4} %{F-}%I:%M %p
 label = %date%
 label-foreground = ${colors.foreground}
 
