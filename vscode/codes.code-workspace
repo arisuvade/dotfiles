@@ -1,18 +1,27 @@
 {
 	"folders": [
 		{
+			"name": "code",
 			"path": "../Code"
 		},
 		{
+			"name": "cc103",
+			"path": "../School/1st Year/2nd Sem/CC103/Java/CC103"
+		},
+		{
+			"name": "scripts",
 			"path": "../GitHub/scripts"
 		},
 		{
+			"name": "dotfiles",
 			"path": "../GitHub/dotfiles"
 		},
 		{
+			"name": "pyblaster",
 			"path": "../GitHub/pyblaster"
 		},
 		{
+			"name": "pyclicx",
 			"path": "../GitHub/pyclicx"
 		}
 	]
