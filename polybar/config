@@ -6,29 +6,28 @@ primary = #00BCD4
 [bar/bar1]
 width = 100%
 height = 20
-offset-x = 1%
-offset-y = 1%
 radius = 0.0
 fixed-center = true
 bottom = false
-background = #00
+background = ${colors.background}
 foreground = ${colors.foreground}
 separator = |
 separator-foreground = ${colors.background}
-line-size = 3pt
+line-size = 2
 padding-left = 0
-padding-right = 0
+padding-right = 1
 module-margin-left = 0
 module-margin-right = 1
 
 font-0 = "Roboto Medium:size=10.5;2"
-font-1 = "Font Awesome 6 Free Solid:size=10.5;1.5"
-font-2 = "Font Awesome 6 Brands:size=12;1.5"
-font-3 = "Font Awesome 6 Brands Regular:size=12;1.5"
+font-1 = "Font Awesome 6 Free Solid:size=11;2"
+font-2 = "Font Awesome 6 Brands:size=11;2"
+font-3 = "Font Awesome 6 Brands Regular:size=11;2"
 
 modules-left = i3
 modules-center = date
 modules-right = volume brightness
+
 cursor-click = pointer
 cursor-scroll = default
 enable-ipc = true
@@ -59,9 +58,9 @@ label-unfocused-padding = 2
 [module/date]
 type = internal/date
 interval = 60
-date = %{F#00BCD4} %{F-}%a %b %d  %{F#00BCD4} %{F-}%I:%M %p
+date = %{F#00BCD4} %{F-}%I:%M %p
+date-alt = %{F#00BCD4} %{F-}%a %b %d
 label = %date%
-label-foreground = ${colors.foreground}
 
 [module/volume]
 type = internal/pulseaudio
@@ -75,9 +74,7 @@ type = internal/backlight
 card = intel_backlight
 use-actual-brightness = true
 enable-scroll = true
-format-prefix = " "
-format-prefix-foreground = ${colors.primary}
-label = %percentage%%
+label = %{F#00BCD4}%{F-} %percentage%%
 
 [settings]
 screenchange-reload = true
