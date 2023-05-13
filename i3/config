@@ -12,14 +12,14 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Launch polybar and picom.
-exec --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id picom
 
 # Set display resolution.
 exec --no-startup-id xrandr --output eDP-1 --mode 1528x859_60.00
 
 # Set wallpaper.
-exec --no-startup-id feh --bg-fill /home/aries/Pictures/Wallpapers/arch.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/arch.jpg
 
 # Disable touchpad if there is a mouse.
 exec --no-startup-id ~/GitHub/scripts/touchpad-automation/automate-touchpad.sh
@@ -28,16 +28,16 @@ exec --no-startup-id ~/GitHub/scripts/touchpad-automation/automate-touchpad.sh
 exec --no-startup-id pulseaudio -k
 
 # Take a screenshot.
-bindsym Print exec xfce4-screenshooter -f -s /home/aries/Pictures/Screenshots/Screenshot_"$(date +%Y-%m-%d_%H-%M-%S)".png
+bindsym Print exec --no-startup-id xfce4-screenshooter -f -s ~/Pictures/Screenshots/Screenshot_"$(date +%Y-%m-%d_%H-%M-%S)".png
 
 # Toggle touchpad on/off.
 bindsym Pause exec --no-startup-id ~/GitHub/scripts/touchpad-automation/on-off-touchpad.sh
 
 # Open power menu.
-bindsym Delete exec --no-startup-id bash /home/aries/.config/rofi/powermenu/type-1/powermenu.sh
+bindsym Delete exec --no-startup-id ~/.config/rofi/powermenu/type-1/powermenu.sh
 
 # Open wifi menu. 
-bindsym Insert exec bash /home/aries/.config/rofi/powermenu/type-1/wifimenu.sh
+bindsym Insert exec ~/.config/rofi/powermenu/type-1/wifimenu.sh
 
 # Application keybindings.
 bindsym $mod+Return exec --no-startup-id alacritty
