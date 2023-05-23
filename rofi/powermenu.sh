@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Current Theme
-dir="$HOME/.config/rofi/powermenu/type-1"
-theme='style-1'
+dir="~/GitHub/dotfiles/rofi/powermenu/"
+theme='theme'
 
 # Options
 shutdown=' Shutdown'
