@@ -5,8 +5,8 @@ dir="~/GitHub/dotfiles/rofi/powermenu/"
 theme='theme'
 
 # Options
-shutdown=' Shutdown'
-reboot=' Reboot'
+shutdown=' Shutdown'
+reboot=' Reboot'
 
 # Rofi CMD
 rofi_cmd() {
