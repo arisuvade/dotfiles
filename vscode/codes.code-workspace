@@ -5,16 +5,16 @@
 			"path": "../Code"
 		},
 		{
-			"name": "scripts",
 			"path": "../GitHub/scripts"
 		},
 		{
-			"name": "dotfiles",
 			"path": "../GitHub/dotfiles"
 		},
 		{
-			"name": "pyblaster",
 			"path": "../GitHub/pyblaster"
 		},
+		{
+			"path": "../GitHub/pyorator"
+		}
 	]
 }
