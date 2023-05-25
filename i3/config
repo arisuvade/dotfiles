@@ -100,7 +100,7 @@ gaps inner 4
 gaps outer 1
 smart_gaps on
 hide_edge_borders smart
-client.focused		#00BCD4 #000000 #DCDCDC #00BCD4 #3cb371 #00BCD4
+client.focused		#00BCD4 #000000 #DCDCDC #00BCD4 #00BCD4 #00BCD4
 
 # Setting workspaces.
 set $ws1 "1"
