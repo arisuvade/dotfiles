@@ -1,14 +1,17 @@
 {
 	"folders": [
 		{
-			"name": "code",
+		    "name": "code",
 			"path": "../Code"
 		},
 		{
-			"path": "../GitHub/scripts"
+            "path": "../GitHub/programs"
 		},
 		{
-			"path": "../GitHub/dotfiles"
+		    "path": "../GitHub/scripts"
+		},
+		{
+            "path": "../GitHub/dotfiles"
 		},
 		{
 			"path": "../GitHub/pyblaster"
