@@ -139,7 +139,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Assigning apps to workspaces
-assign [class="Google-chrome"] 2
-assign [class="code-oss"] 3
+assign [class="code-oss"] 2
+assign [class="Google-chrome"] 3
 assign [class="libreoffice-startcenter"] 4
 
