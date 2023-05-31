@@ -37,3 +37,4 @@ set keycolor cyan
 set functioncolor cyan
 set boldtext
 set brackets ""')>]}"
+set numbercolor cyan
