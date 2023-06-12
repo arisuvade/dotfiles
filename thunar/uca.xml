@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+    <icon>alacritty</icon>
+    <name>Open Terminal Here</name>
+    <unique-id>1610556988230516-1</unique-id>
+    <command>alacritty --working-directory %f</command>
+    <description>Open terminal in current directory</description>
+    <patterns>*</patterns>
+    <directories>*</directories>
+</action>
+</actions>
