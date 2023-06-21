@@ -13,8 +13,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "~/GitHub/dotfiles/rofi/shared/colors.rasi"
-@import                          "~/GitHub/dotfiles/rofi/shared/fonts.rasi"
+@import                          "~/.config/rofi/shared/colors.rasi"
+@import                          "~/.config/rofi/shared/fonts.rasi"
 
 /*****----- Main Window -----*****/
 window {
@@ -24,8 +24,8 @@ window {
     anchor:                      east;
     fullscreen:                  false;
     width:                       136px;
-    x-offset:                    0px;
-    y-offset:                    72px;
+    x-offset:                    -9px;
+    y-offset:                    78px;
 
     /* properties for all widgets */
     enabled:                     true;
