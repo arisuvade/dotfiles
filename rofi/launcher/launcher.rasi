@@ -58,8 +58,8 @@ window {
     fullscreen:                  false;
     height:                      280px;
     width:                       300px;
-    x-offset:                    0px;
-    y-offset:                    155px;
+    x-offset:                    9px;
+    y-offset:                    164px;
 
     /* properties for all widgets */
     enabled:                     true;
