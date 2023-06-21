@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Current Theme
-dir="~/GitHub/dotfiles/rofi/powermenu/"
+dir="~/.config/rofi/powermenu/"
 theme='theme'
 
 # Options
