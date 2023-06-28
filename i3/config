@@ -141,3 +141,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 assign [class="code-oss"] 2
 assign [class="Google-chrome"] 3
 assign [class="libreoffice-startcenter"] 4
+
+# Adjust pop-up window size
+for_window [title="^Save File$"] resize set 800 600, move position center
