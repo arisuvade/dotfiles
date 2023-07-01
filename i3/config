@@ -42,7 +42,7 @@ bindsym $alt+f exec --no-startup-id thunar
 bindsym $alt+l exec libreoffice
 bindsym $alt+b exec brave -disk-cache-dir=Documents --disk-cache-size=104857600
 bindsym $alt+c exec google-chrome-stable --new-window classroom.google.com
-bindsym $alt+v exec code
+bindsym $alt+v exec code ~/Documents/codes.code-workspace
 
 # Adjust audio.
 set $refresh_i3status killall -SIGUSR1 i3status
