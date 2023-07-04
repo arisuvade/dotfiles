@@ -19,8 +19,9 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 1
 
-font-0 = "Roboto Medium:size=9.5;1"
-font-1 = "Font Awesome 6 Free Solid:size=10;2"
+font-0 = "Roboto Medium:size=10;1"
+font-1 = "Font Awesome 6 Free Solid:size=10.5;2"
+font-2 = "Font Awesome 6 Free Solid:size=13.5;2"
 
 modules-left = i3 date
 modules-center = mpd
@@ -79,7 +80,6 @@ label = %{F#00BCD4}%{F-} %percentage%%
 type = internal/mpd
 host = 127.0.0.1
 port = 6601
-interval = 2
 format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <label-song>
 icon-play = %{F#00BCD4}
 icon-pause = %{F#00BCD4}⏸
@@ -87,7 +87,12 @@ icon-stop = %{F#00BCD4}⏹
 icon-prev = %{F#00BCD4}⏮
 icon-next = %{F#00BCD4}⏭
 label-song = %{F#00BCD4}%{F-} %artist% - %title%
-label-song-padding = 3
+label-song-padding = 4
+icon-play-font = 3
+icon-pause-font = 3
+icon-stop-font = 3
+icon-prev-font = 3
+icon-next-font = 3
 
 [settings]
 screenchange-reload = true
