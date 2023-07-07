@@ -14,12 +14,15 @@
             "path": "../GitHub/dotfiles"
 		},
 		{
+		    "name": "PyBlaster",
 			"path": "../GitHub/pyblaster"
 		},
 		{
+		    "name": "PyOrator",
 			"path": "../GitHub/pyorator"
 		},
 		{
+		    "name": "PyQRify",
 		    "path": "../GitHub/pyqrify"
 		},
 	]
