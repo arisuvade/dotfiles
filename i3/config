@@ -32,10 +32,10 @@ bindsym $alt+f exec --no-startup-id thunar
 bindsym $alt+l exec libreoffice
 bindsym $alt+b exec brave --enable-low-end-device-mode
 bindsym $alt+c exec google-chrome-stable --new-window classroom.google.com
-bindsym $alt+v exec code ~/Documents/codes.code-workspace
+bindsym $alt+v exec vscodium ~/Documents/codes.code-workspace
 
 # Assigned apps to run on different workspaces.
-assign [class="code-oss"] 2
+assign [class="VSCodium"] 2
 assign [class="Google-chrome"] 3
 assign [class="libreoffice-startcenter"] 4
 
