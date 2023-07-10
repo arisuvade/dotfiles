@@ -1,41 +1,31 @@
-# Set modifier keys. Super key and alt.
+# Set Super and Alt key
 set $mod Mod4
 set $alt Mod1
 
-# Important startup application.
+# Launch necessary softwares
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
-
-# Kill, reload, and restart apps and config.
-bindsym $mod+q kill
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-
-# Launch necessary softwares.
 exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id picom
 exec --no-startup-id redshift
 exec --no-startup-id pulseaudio -k
-
-# Set wallpaper.
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/pokemon7.jpg
-
-# Disable touchpad if there is a mouse.
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/pokemon7.jpg
 exec --no-startup-id ~/GitHub/scripts/touchpad-automation/automate-touchpad.sh
 
-# Take a screenshot.
+# Adjust audio and brightness
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+
+# Utility keybindings
 bindsym Print exec --no-startup-id xfce4-screenshooter -f -s ~/Pictures/Screenshots/Screenshot_"$(date +%Y-%m-%d_%H-%M-%S)".png
-
-# Toggle touchpad on/off.
 bindsym Pause exec --no-startup-id ~/GitHub/scripts/touchpad-automation/on-off-touchpad.sh
-
-# Open power menu.
+bindsym Insert exec ~/.config/rofi/wifimenu.sh
 bindsym Delete exec --no-startup-id ~/.config/rofi/powermenu.sh
 
-# Open wifi menu. 
-bindsym Insert exec ~/.config/rofi/wifimenu.sh
-
-# Application keybindings.
+# Application keybindings
 bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
 bindsym $alt+f exec --no-startup-id thunar
@@ -44,36 +34,36 @@ bindsym $alt+b exec brave --enable-low-end-device-mode
 bindsym $alt+c exec google-chrome-stable --new-window classroom.google.com
 bindsym $alt+v exec code ~/Documents/codes.code-workspace
 
-# Adjust audio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+# Assigned apps to run on different workspaces.
+assign [class="code-oss"] 2
+assign [class="Google-chrome"] 3
+assign [class="libreoffice-startcenter"] 4
 
-# Adjust brightness.
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+# Adjust pop-up window size
+for_window [title="^Save File$"] resize set 800 600, move position center
 
-# Font for window titles.
+# Kill, reload, and restart apps and config
+bindsym $mod+q kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+# Font for window titles
 font pango:Roboto Medium 10
 
-# Drag windows to their wanted position.
+# Drag windows to their wanted position
 floating_modifier $mod
 
-# Change focus window.
+# Change focus window
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# Move focused window.
+# Move focused window
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
-# Split to horizontal and vertical orientation to new window.
-bindsym $mod+h split h
-bindsym $mod+v split v
 
 # Enter fullscreen mode for the focused window.
 bindsym $mod+f fullscreen toggle
@@ -136,11 +126,3 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
-
-# Assigned apps to run on different workspaces.
-assign [class="code-oss"] 2
-assign [class="Google-chrome"] 3
-assign [class="libreoffice-startcenter"] 4
-
-# Adjust pop-up window size
-for_window [title="^Save File$"] resize set 800 600, move position center
