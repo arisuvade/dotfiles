@@ -1,52 +1,15 @@
+# My Dotfiles: Linux Configurations and Personalizations
+
 ## Overview
-This repository contains a collection of dotfiles and configuration files used by the owner, Aries, on their Arch Linux system. These files are designed to enhance the user experience and provide customized settings and shortcuts for frequently used tools and applications.
 
-## Structure
-The repository is organized into subdirectories for each application or tool. Within each subdirectory, there are individual files for each configuration setting. Each file has a clear and descriptive name to help users quickly identify its purpose.
+Dotfiles are essential configuration files that allow for fine-tuning and customization of various aspects of your computing environment. This repository houses a carefully curated collection of my personal dotfiles, meticulously crafted to elevate the user experience and establish a seamless workflow across a diverse range of applications and tools.
 
-## Usage
-|   Files    |       Location       |
-|  :-----    |      :--------:      |
-| Alacritty  | ~/.config/alacritty/ |
-| GTK        | ~/.config/gtk-3.0/   |
-| I3         | ~/.config/i3/        |
-| Polybar    | ~/.config/polybar/   |
-| Rofi       | ~/.config/rofi/      |
-| Thunar     | ~/.config/Thunar     |
-| VSCode     | ~/.config/Code/User/ |
-| Picom      | ~/.config/           |
-| Redshift   | ~/.config/           |
-| Starship   | ~/.config/           |
-| Pulseaudio | /etc/pulse/          |
-| MPD        | $HOME                |
-| Bash       | $HOME                |
-| Nano       | $HOME                |
-| Profile    | $HOME                |
-| Xinit      | $HOME                |
-| Zsh        | $HOME                |
+Inside this repository, you will discover a comprehensive array of dotfiles encompassing configurations for numerous applications. These configurations facilitate personalized settings and optimizations, resulting in a visually captivating, efficient, and streamlined user interface.
 
-## Features
-This repository contains a variety of configuration files and dotfiles that customize the behavior and appearance of various tools and applications. Some of the key features include:
+Leveraging these dotfiles empowers you to effortlessly apply pre-defined configurations or tailor them to align with your specific preferences. This repository serves as an invaluable resource, streamlining the setup process and maintaining consistent settings across diverse systems.
 
-- Customized i3 window manager configurations for enhanced desktop management
-- Customized alacritty terminal configurations for enhanced terminal functionality
-- Customized bash and zsh configurations for enhanced command line functionality
-- Customized vs code configurations for enhanced text editing
-
-## Contributions
-Contributions to this repository are welcome and appreciated! If you have suggestions for new configuration settings or improvements to existing ones, please feel free to submit a pull request.
+Feel free to explore, experiment, and seamlessly integrate these dotfiles into your own environment. They have been meticulously designed to empower users in creating a personalized computing experience that resonates with their unique style and requirements. Embrace the flexibility and personalization that these dotfiles offer, and unlock the full potential of your applications and tools.
 
 ## License
-This repository is licensed under the GNU General Public License (GPL) version 3.0. You may use, modify, and distribute the code in this repository, provided that any modifications you make are also licensed under the GPL 3.0 and that you include a copy of the GPL 3.0 license in any distribution of this code. See the [LICENSE](https://github.com/arisuvade/dotfiles/blob/main/LICENSE) file for the full text of the GPL 3.0 license.
 
-## Dependencies
-This repository uses a number of dependencies, including various tools and applications that are commonly used on Arch Linux systems. A list of dependencies, along with instructions for installing them, can be found in the README file located in the root directory of the repository.
-
-## Future Plans
-This repository is a work in progress, and the owner plans to continue updating and improving the configuration files and dotfiles over time. Planned future improvements include adding more customization options, improving the documentation, and adding support for additional tools and applications.
-
-## Acknowledgments
-The owner would like to thank the open source community for creating and maintaining the tools and applications that make projects like this possible. Additionally, the owner would like to acknowledge the many contributors to various dotfiles and configuration repositories on GitHub, whose work has inspired and informed this project.
-
-## Conclusion
-Overall, this repository is designed to provide a collection of useful and customizable dotfiles and configuration files for Arch Linux users. Whether you are new to the platform or an experienced user, these files can help you enhance your workflow and make the most of your system. If you have any questions, comments, or suggestions, please don't hesitate to contact the owner.
+These dotfiles and configurations are licensed under the [GNU General Public License (GPL)](https://github.com/arisuvade/dotfiles/blob/main/LICENSE). Please refer to the LICENSE file for more details regarding the permissions, restrictions, and obligations associated with the use and distribution of this software.
