@@ -6,10 +6,10 @@ disabled = true
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 	
-# Symbols: '❯', '➜', '❱', ''
+# Symbols: '❯', '➜', '❱'
 [character]
-success_symbol = '[❱❱❱](bold green)'
-error_symbol = '[❱❱❱](bold red)'
+success_symbol = '[❱](bold green)'
+error_symbol = '[❱](bold red)'
 
 [directory]
 truncation_length = 1
