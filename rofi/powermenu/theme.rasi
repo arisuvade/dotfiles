@@ -20,18 +20,18 @@ configuration {
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    northeast;
-    anchor:                      east;
+    location:                    center;
+    anchor:                      center;
     fullscreen:                  false;
     width:                       136px;
-    x-offset:                    -9px;
-    y-offset:                    78px;
+    x-offset:                    0px;
+    y-offset:                    -80px;
 
     /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
+    border:                      2px solid;
     border-radius:               0px;
     border-color:                @selected;
     cursor:                      "default";
@@ -117,7 +117,7 @@ listview {
     enabled:                     true;
     columns:                     1;
     lines:                       2;
-    cycle:                       true;
+    cycle:                       false;
     dynamic:                     true;
     scrollbar:                   false;
     layout:                      vertical;
@@ -143,7 +143,7 @@ element {
     margin:                      0px;
     padding:                     10px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               100px;
     border-color:                @selected;
     background-color:            transparent;
     text-color:                  @foreground;
