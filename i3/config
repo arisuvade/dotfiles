@@ -7,9 +7,8 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id picom
-exec --no-startup-id pulseaudio -k
+exec --no-startup-id feh --bg-fill '/home/aries/Pictures/Wallpapers/snorlax.jpg'
 exec --no-startup-id ~/GitHub/scripts/touchpad-automation/automate-touchpad.sh
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/arch1.png
 
 # Adjust audio and brightness
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -36,7 +35,6 @@ bindsym $alt+v exec vscodium ~/Documents/codes.code-workspace
 # Assigned apps to run on different workspaces.
 assign [class="VSCodium"] 2
 assign [class="Google-chrome"] 3
-assign [class="libreoffice-startcenter"] 4
 
 # Adjust pop-up window size
 for_window [title="^Save File$"] resize set 800 600, move position center
@@ -47,7 +45,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Font for window titles
-font pango:Roboto Medium 10
+font pango:Roboto-Bold 10
 
 # Drag windows to their wanted position
 floating_modifier $mod
@@ -83,9 +81,9 @@ mode "" {
 bindsym $mod+r mode ""
 
 # Windows settings.
-default_border pixel 4
-gaps inner 4
-gaps outer 1
+default_border pixel 2
+gaps inner 3
+gaps outer 0
 smart_gaps on
 hide_edge_borders smart
 client.focused		#00BCD4 #000000 #DCDCDC #00BCD4 #00BCD4 #00BCD4
