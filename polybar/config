@@ -67,6 +67,7 @@ label-padding = 3
 type = custom/script
 exec = echo "Rofi"
 click-left = rofi -show drun &
+click-right = ~/.config/rofi/powermenu.sh
 
 [module/thunar]
 type = custom/script
@@ -82,6 +83,7 @@ click-left = alacritty &
 type = custom/script
 exec = echo "Brave"
 click-left = brave --enable-low-end-device-mode &
+click-right = brave --enable-low-end-device-mode --new-tab chat.openai.com &
 
 [module/vscodium]
 type = custom/script
