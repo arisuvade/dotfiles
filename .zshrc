@@ -6,4 +6,6 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
-alias mouse='GitHub/scripts/mouse-pointer-speed.sh'
+alias mouse='~/GitHub/scripts/mouse-pointer-speed.sh'
+alias poly='~/.config/polybar/launch.sh'
+alias clock='~/GitHub/scripts/system-error-fixes/fix-clock.sh'
