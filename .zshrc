@@ -9,4 +9,4 @@ source $ZSH/oh-my-zsh.sh
 alias mouse='~/GitHub/scripts/mouse-pointer-speed.sh'
 alias poly='~/.config/polybar/launch.sh'
 alias clock='~/GitHub/scripts/system-error-fixes/fix-clock.sh'
-alias wifi='nmcli device wifi connect 1 password ariesdave'
+alias hotspot='nmcli device wifi connect 1 password 11111111'
