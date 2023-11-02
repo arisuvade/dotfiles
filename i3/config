@@ -7,7 +7,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id picom
-exec --no-startup-id feh --bg-fill '/home/aries/Pictures/Wallpapers/arch.jpg'
+exec --no-startup-id feh --bg-fill '/home/aries/Pictures/Wallpapers/cool-linux-backgrounds2.jpg'
 exec --no-startup-id ~/GitHub/scripts/touchpad-automation/automate-touchpad.sh
 exec --no-startup-id pulseaudio -k
 
@@ -28,7 +28,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
 bindsym $alt+f exec --no-startup-id thunar
 bindsym $alt+l exec libreoffice
-bindsym $alt+b exec brave --enable-low-end-device-mode
+bindsym $alt+b exec thorium-browser
 bindsym $alt+c exec google-chrome-stable --new-window classroom.google.com
 bindsym $alt+v exec vscodium ~/Documents/codes.code-workspace
 
