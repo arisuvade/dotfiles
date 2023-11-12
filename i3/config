@@ -25,7 +25,7 @@ bindsym Insert exec ~/.config/rofi/wifimenu.sh
 bindsym Delete exec --no-startup-id ~/.config/rofi/powermenu.sh
 
 # Application keybindings
-bindsym $mod+Return exec alacritty -t 'alacritty-floating'
+bindsym $mod+Return exec --no-startup-id alacritty -t 'alacritty-floating'
 for_window [title="^alacritty-floating$"] floating enable, move position center
 
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
