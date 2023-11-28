@@ -32,13 +32,11 @@ for_window [title="^alacritty-floating$"] floating enable, move position center
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
 bindsym $alt+f exec --no-startup-id thunar
 bindsym $alt+l exec libreoffice
-bindsym $alt+b exec thorium-browser
-bindsym $alt+c exec google-chrome-stable --new-window classroom.google.com
+bindsym $alt+b exec thorium-browser --enable-low-end-device-mode
 bindsym $alt+v exec vscodium ~/Documents/codes.code-workspace
 
 # Assigned apps to run on different workspaces.
 assign [class="VSCodium"] 2
-assign [class="Google-chrome"] 3
 
 # Adjust pop-up window size
 for_window [title="^Save File$"] resize set 800 600, move position center
