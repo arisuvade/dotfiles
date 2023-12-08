@@ -10,7 +10,7 @@ exec --no-startup-id picom
 exec --no-startup-id feh --bg-fill '/home/aries/Pictures/Wallpapers/linux_vs_windows.jpg'
 exec --no-startup-id ~/GitHub/scripts/touchpad-automation/automate-touchpad.sh
 exec --no-startup-id pulseaudio -k
-exec --no-startup-id alacritty -t 'alacritty-floating'
+exec_always --no-startup-id alacritty -e bash -c "~/GitHub/scripts/system-error-fixes/fix_clock.py; zsh"
 
 # Adjust audio and brightness
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
