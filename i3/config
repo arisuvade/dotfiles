@@ -43,6 +43,7 @@ for_window [title="^Save File$"] resize set 800 600, move position center
 
 # Kill, reload, and restart apps and config
 # bindsym $mod+q kill
+bindsym $mod+q exec ~/.config/rofi/confirm-close.sh
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
@@ -66,14 +67,6 @@ bindsym $mod+Shift+Right move right
 
 # Enter fullscreen mode for the focused window.
 bindsym $mod+f fullscreen toggle
-
-# Close window.
-set $close "%{F#00BCD4}"
-mode $close {
-    bindsym $mod+q kill, mode default
-    bindsym Escape mode default
-}
-bindsym $mod+q mode $close
 
 # Resize window.
 set $resize "%{F#00BCD4}"
