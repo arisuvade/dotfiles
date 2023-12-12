@@ -19,8 +19,8 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 0
 
-font-0 = "Roboto-Bold:style=bold:size=11;1"
-font-1 = "Font Awesome 6 Free Solid:size=11;2"
+font-0 = "MesloLGS NF Bold:style=bold:size=12;1"
+font-1 = "Font Awesome 6 Free Solid:size=12;1"
 
 modules-left = i3
 modules-center = date
