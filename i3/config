@@ -11,7 +11,6 @@ exec --no-startup-id redshift
 exec --no-startup-id picom
 exec --no-startup-id ~/GitHub/scripts/touchpad-automation/automate-touchpad.sh
 exec --no-startup-id pulseaudio -k
-exec --no-startup-id feh --bg-fill '/home/aries/Pictures/Wallpapers/linux_vs_windows.jpg'
 
 # Adjust audio and brightness
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
@@ -43,12 +42,12 @@ assign [class="VSCodium"] 2
 for_window [title="^Save File$"] resize set 800 600, move position center
 
 # Kill, reload, and restart apps and config
-bindsym $mod+q kill
+# bindsym $mod+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Font for window titles
-font pango:Roboto-Bold 10
+font pango:MesloLGS NF Bold 10
 
 # Drag windows to their wanted position
 floating_modifier $mod
@@ -68,8 +67,17 @@ bindsym $mod+Shift+Right move right
 # Enter fullscreen mode for the focused window.
 bindsym $mod+f fullscreen toggle
 
+# Close window.
+set $close "%{F#00BCD4}"
+mode $close {
+    bindsym $mod+q kill, mode default
+    bindsym Escape mode default
+}
+bindsym $mod+q mode $close
+
 # Resize window.
-mode "%{F#00BCD4}Resize" {
+set $resize "%{F#00BCD4}"
+mode $resize {
         # Same bindings, but for the arrow keys.
         bindsym Left resize shrink width 1 px or 1 ppt
         bindsym Down resize grow height 1 px or 1 ppt
@@ -81,7 +89,7 @@ mode "%{F#00BCD4}Resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
-bindsym $mod+r mode "%{F#00BCD4}Resize"
+bindsym $mod+r mode $resize
 
 # Windows settings.
 default_border pixel 2
