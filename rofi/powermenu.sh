@@ -6,7 +6,7 @@ theme='theme'
 
 # Options
 shutdown=' SHUTDOWN'
-reboot='   RESTART'
+reboot='    REBOOT'
 
 # Rofi CMD
 rofi_cmd() {
