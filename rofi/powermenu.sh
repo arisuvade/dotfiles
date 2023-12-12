@@ -5,8 +5,8 @@ dir="~/.config/rofi/powermenu/"
 theme='theme'
 
 # Options
-shutdown=' Shutdown'
-reboot=' Reboot'
+shutdown=' SHUTDOWN'
+reboot='   RESTART'
 
 # Rofi CMD
 rofi_cmd() {
@@ -22,9 +22,9 @@ run_rofi() {
 # Execute Command
 run_cmd() {
 	if [[ $1 == '--shutdown' ]]; then
-		systemctl poweroff
+		shutdown now
 	elif [[ $1 == '--reboot' ]]; then
-		systemctl reboot
+		reboot
 	fi
 }
 
