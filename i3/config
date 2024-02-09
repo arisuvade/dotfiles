@@ -5,7 +5,7 @@ set $alt Mod1
 # Launch necessary softwares
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
-exec --no-startup-id thorium-browser
+exec --no-startup-id ~/Documents/Thorium-Browser-AVX2.AppImage
 exec --no-startup-id ~/GitHub/scripts/system-error-fixes/fix_clock.py
 exec --no-startup-id redshift
 exec --no-startup-id picom
@@ -32,7 +32,7 @@ for_window [title="^alacritty-floating$"] floating enable, move position center
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
 bindsym $alt+f exec --no-startup-id thunar
 bindsym $alt+l exec libreoffice
-bindsym $alt+b exec thorium-browser
+bindsym $alt+b exec ~/Documents/Thorium-Browser-AVX2.AppImage
 bindsym $alt+v exec vscodium ~/Documents/codes.code-workspace
 
 # Assigned apps to run on different workspaces.
