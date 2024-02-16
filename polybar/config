@@ -58,7 +58,7 @@ label-unfocused-padding = 2
 [module/date]
 type = internal/date
 interval = 60
-date = %a %b %d  %I:%M %p
+date = %a, %b %d  %I:%M %p
 label = %date%
 label-padding = 3
 
