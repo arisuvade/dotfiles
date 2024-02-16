@@ -37,6 +37,10 @@ bindsym $alt+l exec libreoffice
 bindsym $alt+b exec ~/Documents/Thorium-Browser-AVX2.AppImage
 bindsym $alt+v exec vscodium ~/Documents/codes.code-workspace
 
+bindsym Home exec "~/GitHub/scripts/open-website.sh youtube.com"
+bindsym Prior exec "~/GitHub/scripts/open-website.sh chat.openai.com"
+bindsym Next exec "~/GitHub/scripts/open-website.sh reddit.com"
+
 # Assigned apps to run on different workspaces.
 assign [class="VSCodium"] 2
 
