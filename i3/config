@@ -5,51 +5,54 @@ set $alt Mod1
 # Launch necessary softwares
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
-exec --no-startup-id brave
-exec --no-startup-id ~/GitHub/scripts/system-error-fixes/fix_clock.py
-exec --no-startup-id redshift
+exec --no-startup-id ~/github/scripts/system-error-fixes/fix_clock.py
+exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id picom
-exec --no-startup-id ~/GitHub/scripts/touchpad-automation/automate-touchpad.sh
+exec --no-startup-id redshift
+exec --no-startup-id ~/github/scripts/touchpad-automation/automate-touchpad.sh
+exec --no-startup-id brave
+exec --no-startup-id pulseaudio -k
 
 # Adjust audio and brightness
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 10
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 10
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
 # Utility keybindings
-bindsym Print exec --no-startup-id xfce4-screenshooter -f -m -s ~/Pictures/Screenshots/Screenshot_"$(date +%Y-%m-%d_%H-%M-%S)".png
-bindsym Shift+Print exec --no-startup-id xfce4-screenshooter -r -s ~/Pictures/Screenshots/Screenshot_"$(date +%Y-%m-%d_%H-%M-%S)".png
-bindsym Pause exec --no-startup-id ~/GitHub/scripts/touchpad-automation/on-off-touchpad.sh
+bindsym Print exec --no-startup-id xfce4-screenshooter -f -m -s ~/pictures/screenshots/screenshot_"$(date +%Y-%m-%d_%H-%M-%S)".png
+bindsym Shift+Print exec --no-startup-id xfce4-screenshooter -r -s ~/pictures/screenshots/screenshot_"$(date +%Y-%m-%d_%H-%M-%S)".png
+bindsym Pause exec --no-startup-id ~/github/scripts/touchpad-automation/on-off-touchpad.sh
 bindsym Insert exec ~/.config/rofi/wifimenu.sh
 bindsym Delete exec --no-startup-id ~/.config/rofi/powermenu.sh
 
 # Application keybindings
-#bindsym $mod+Return exec --no-startup-id alacritty -t 'alacritty-floating'
-for_window [title="^alacritty-floating$"] floating enable, move position center
-bindsym Menu exec --no-startup-id alacritty -t 'alacritty-floating'
-for_window [title="^alacritty-floating$"] floating enable, move position center
-
+#bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
-bindsym $alt+f exec --no-startup-id thunar
-bindsym $alt+l exec libreoffice
 bindsym $alt+b exec brave
 bindsym $alt+v exec vscodium ~/Documents/codes.code-workspace
+bindsym $alt+l exec ~/Documents/LibreOffice.AppImage --nologo
+
+bindsym Menu exec --no-startup-id alacritty -t 'alacritty-floating'
+for_window [title="^alacritty-floating$"] floating enable, resize set 570 370, move position center
+bindsym $alt+f exec --no-startup-id pcmanfm
+for_window [class="Pcmanfm"] floating enable, resize set 670 470, move position center
 
 # Assigned apps to run on different workspaces.
 assign [class="VSCodium"] 2
+assign [class="libreoffice-startcenter"] 3
 
 # Adjust pop-up window size
-for_window [title="^Save File$"] resize set 800 600, move position center
+for_window [title="^Save File$"] resize set 700 500, move position center
 
 # Kill, reload, and restart apps and config
-# bindsym $mod+q kill
-bindsym $mod+q exec ~/.config/rofi/confirm-close.sh
+#bindsym $mod+q kill
+bindsym $mod+q exec --no-startup-id ~/.config/rofi/confirm-close.sh
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Font for window titles
-font pango:MesloLGS NF Bold 10
+font pango:NotoSans Bold 10
 
 # Drag windows to their wanted position
 floating_modifier $mod
@@ -87,8 +90,8 @@ bindsym $mod+r mode $resize
 
 # Windows settings.
 default_border pixel 2
-gaps inner 3
-gaps outer 0
+gaps inner 6
+gaps outer 3
 smart_gaps on
 hide_edge_borders smart
 client.focused		#00BCD4 #000000 #DCDCDC #00BCD4 #00BCD4 #00BCD4
