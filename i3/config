@@ -5,12 +5,13 @@ set $alt Mod1
 # Launch necessary softwares
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
-exec --no-startup-id ~/github/scripts/system-error-fixes/fix_clock.py
+exec --no-startup-id feh --bg-fill ~/Pictures/kde-plasma-6-wallpaper-light.jpeg
 exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id picom
 exec --no-startup-id redshift
 exec --no-startup-id ~/github/scripts/touchpad-automation/automate-touchpad.sh
-exec --no-startup-id brave
+exec --no-startup-id brave --use-gl=desktop --enable-features=VaapiVideoDecoder --disable-features=UseChromeOSDirectVideoDecoder
+#exec --no-startup-id alacritty -t 'alacritty-floating'
 exec --no-startup-id pulseaudio -k
 
 # Adjust audio and brightness
@@ -20,8 +21,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 
 # Utility keybindings
-bindsym Print exec --no-startup-id xfce4-screenshooter -f -m -s ~/pictures/screenshots/screenshot_"$(date +%Y-%m-%d_%H-%M-%S)".png
-bindsym Shift+Print exec --no-startup-id xfce4-screenshooter -r -s ~/pictures/screenshots/screenshot_"$(date +%Y-%m-%d_%H-%M-%S)".png
+bindsym Print exec --no-startup-id scrot ~/Pictures/Screenshots/Screenshot_"$(date +%Y-%m-%d_%H-%M-%S)".png
 bindsym Pause exec --no-startup-id ~/github/scripts/touchpad-automation/on-off-touchpad.sh
 bindsym Insert exec ~/.config/rofi/wifimenu.sh
 bindsym Delete exec --no-startup-id ~/.config/rofi/powermenu.sh
@@ -29,10 +29,10 @@ bindsym Delete exec --no-startup-id ~/.config/rofi/powermenu.sh
 # Application keybindings
 #bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
-bindsym $alt+b exec brave
+bindsym $alt+b exec brave --use-gl=desktop --enable-features=VaapiVideoDecoder --disable-features=UseChromeOSDirectVideoDecoder
 bindsym $alt+v exec vscodium ~/Documents/codes.code-workspace
 bindsym $alt+l exec ~/Documents/LibreOffice.AppImage --nologo
-
+# Floating applications
 bindsym Menu exec --no-startup-id alacritty -t 'alacritty-floating'
 for_window [title="^alacritty-floating$"] floating enable, resize set 570 370, move position center
 bindsym $alt+f exec --no-startup-id pcmanfm
@@ -90,8 +90,8 @@ bindsym $mod+r mode $resize
 
 # Windows settings.
 default_border pixel 2
-gaps inner 6
-gaps outer 3
+gaps inner 5
+gaps outer 0
 smart_gaps on
 hide_edge_borders smart
 client.focused		#00BCD4 #000000 #DCDCDC #00BCD4 #00BCD4 #00BCD4
