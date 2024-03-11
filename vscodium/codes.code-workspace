@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "Codes",
+			"path": "../Codes"
+		},
+		{
+			"path": "../GitHub/scripts"
+		},
+		{
+			"path": "../GitHub/dotfiles"
+		},
+		{
+		    "path": "../Codes/IPT"
+		},
+	],
+	"settings": {
+		"java.debug.settings.onBuildFailureProceed": true,
+		"liveServer.settings.multiRootWorkspaceName": "code"
+	}
+}
