@@ -1,0 +1,58 @@
+{
+    "height": 0,
+    "spacing": 1,
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "backlight", "custom/wlogout"],
+    
+    "hyprland/workspaces": {
+        "format": "{icon}",
+    },
+
+    "clock": {
+        "interval": 60,
+        "format": "{:%a, %b %d  %I:%M %p}",
+        "tooltip-format": "Date"
+    },
+
+    "backlight": {
+        "scroll-step": 5,
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "<span foreground='#00BCD4'></span>",
+            "<span foreground='#00BCD4'></span>"
+        ],
+        "tooltip-format": "Brightness"
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "<span foreground='#00BCD4'>   </span>",
+        "format-icons": {
+            "headphone": "<span foreground='#00BCD4'></span>",
+            "hands-free": "<span foreground='#00BCD4'></span>",
+            "headset": "<span foreground='#00BCD4'></span>",
+            "phone": "<span foreground='#00BCD4'></span>",
+            "portable": "<span foreground='#00BCD4'></span>",
+            "car": "<span foreground='#00BCD4'>",
+            "default": [
+                "<span foreground='#00BCD4'></span>",
+                "<span foreground='#00BCD4'></span>",
+                "<span foreground='#00BCD4'></span>"
+            ]
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+        "tooltip-format": "Speaker"
+    },
+
+    "custom/wlogout": {
+        "format": "  ",
+        "interval": "once",
+        "on-click": "wlogout -c 5 -r 5 -p layer-shell",
+    }
+}
