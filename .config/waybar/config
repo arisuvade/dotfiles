@@ -7,7 +7,7 @@
     "gtk-layer-shell": true,
 
     "modules-left": ["custom/wlogout", "hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
+    "modules-center": [],
     "modules-right": ["pulseaudio", "backlight", "clock"],
     
     "hyprland/window": {
@@ -76,7 +76,7 @@
     },
 
     "custom/wlogout": {
-        "format": "<span foreground='#00BCD4'>  </span>",
+        "format": "<span foreground='#FFC0CB'>  </span>",
         "interval": "once",
         "on-click": "wlogout -c 7 -r 7 -p layer-shell",
     }
