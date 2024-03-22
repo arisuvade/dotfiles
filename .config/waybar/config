@@ -7,7 +7,7 @@
     "gtk-layer-shell": true,
 
     "modules-left": ["custom/wlogout", "hyprland/workspaces"],
-    "modules-center": [],
+    "modules-center": ["hyprland/window"],
     "modules-right": ["pulseaudio", "backlight", "clock"],
     
     "hyprland/window": {
@@ -33,7 +33,7 @@
             }
         },
         "actions": {
-            "on-click-middle": "mode",
+            "on-click": "mode",
             "on-click-forward": "tz_down",
             "on-click-backward": "tz_up",
             "on-scroll-up": "shift_down",
@@ -63,12 +63,8 @@
             "headset": "<span foreground='#00BCD4'></span>",
             "phone": "<span foreground='#00BCD4'></span>",
             "portable": "<span foreground='#00BCD4'></span>",
-            "car": "<span foreground='#00BCD4'>",
-            "default": [
-                "<span foreground='#00BCD4'></span>",
-                "<span foreground='#00BCD4'></span>",
-                "<span foreground='#00BCD4'></span>"
-            ]
+            "car": "<span foreground='#00BCD4'></span>",
+            "default": "<span foreground='#00BCD4'></span>"
         },
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pavucontrol",
@@ -76,7 +72,7 @@
     },
 
     "custom/wlogout": {
-        "format": "<span foreground='#FFC0CB'>  </span>",
+        "format": "<span foreground='#FFC0CB'>  </span>",
         "interval": "once",
         "on-click": "wlogout -c 7 -r 7 -p layer-shell",
     }
