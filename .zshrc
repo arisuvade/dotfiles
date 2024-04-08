@@ -14,14 +14,8 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
-alias mouse='~/GitHub/scripts/fix-mouse.sh'
-alias poly='~/.config/polybar/launch.sh'
-alias clock='~/GitHub/scripts/system-error-fixes/fix_clock.py'
 alias hotspot='nmcli device wifi connect 1 password 11111111'
 alias wifi='nmcli device wifi connect 2 password 39EJ1D24GQA'
-alias off='kill -9 -1'
 
-alias mkdir='mkdir -p'
-alias mirror='rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist'
-
-alias sdv='gamemoderun /home/aries/GOG\ Games/Stardew\ Valley/start.sh'
+alias clock='sudo /home/aries/GitHub/scripts/fix-clock.sh'
+alias wallp='/home/aries/GitHub/scripts/change-wallpaper.sh'
