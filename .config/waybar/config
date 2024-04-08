@@ -23,7 +23,7 @@
     "clock#time": {
         "interval": 60,
         "format": "{:%I\n%M\n%p}",
-        "on-click-right": "~/GitHub/scripts/system-error-fixes/fix_clock.py",
+        "on-click-right": "~/GitHub/scripts/fix_clock.py",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
