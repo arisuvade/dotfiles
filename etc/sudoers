@@ -1,0 +1,2 @@
+aries ALL=(ALL) NOPASSWD: /home/aries/GitHub/scripts/fix-clock.sh
+aries ALL=(ALL) NOPASSWD: /home/aries/GitHub/scripts/bios-boot.sh
