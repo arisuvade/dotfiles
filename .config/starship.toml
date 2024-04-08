@@ -1,0 +1,27 @@
+add_newline = false
+
+[line_break]
+disabled = true
+
+[battery]
+disabled = true
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+	
+# Symbols: '❯', '➜', '❱'
+[character]
+success_symbol = '[❱❱❱](bold green)'
+error_symbol = '[❱❱❱](bold red)'
+
+[directory]
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+
+[java]
+symbol = ' '
+
+[python]
+symbol = ' '
+
+[nodejs]
+symbol = ' '

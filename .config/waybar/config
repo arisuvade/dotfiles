@@ -1,31 +1,34 @@
 {
     "height": 0,
-    "spacing": 1,
-    "mod": "dock",
-    "exclusive": true,
-    "passthrough": false,
-    "gtk-layer-shell": true,
+    "spacing": 17,
+    "position": "right",
+    "reload_style_on_change": true,
 
-    "modules-left": ["custom/wlogout", "hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "backlight", "clock"],
-    
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock#time"],
+    "modules-right": ["pulseaudio#icon", "pulseaudio#volume", "backlight#icon", "backlight#percent", "custom/wlogout"],
+
+    "hyprland/workspaces": {
+        "format": "{}",
+        "on-click": "activate",
+        "all-outputs": true
+    },
+     
     "hyprland/window": {
-        "max-length": 95,
+        "format": "<span font='10' font-weight='bold'>    {}</span>",
+        "max-length": 90,
         "separate-outputs": true
     },
 
-    "clock": {
+    "clock#time": {
         "interval": 60,
-        "format": "{:%I:%M %p}",
-        "format-alt": "{:%a, %b %d}",
+        "format": "{:%I\n%M\n%p}",
         "on-click-right": "~/GitHub/scripts/system-error-fixes/fix_clock.py",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
             "mode-mon-col": 3,
             "on-scroll": 1,
-            "on-click-right": "mode",
             "format": {
                 "months": "<span color='#ffead3'><b>{}</b></span>",
                 "weekdays": "<span color='#00BCD4'><b>{}</b></span>",
@@ -33,7 +36,6 @@
             }
         },
         "actions": {
-            "on-click": "mode",
             "on-click-forward": "tz_down",
             "on-click-backward": "tz_up",
             "on-scroll-up": "shift_down",
@@ -41,39 +43,45 @@
         }
     },
 
-    "backlight": {
-        "scroll-step": 5,
-        "format": "{percent}% {icon}",
-        "format-icons": [
-            "<span foreground='#00BCD4'></span>",
-            "<span foreground='#00BCD4'></span>"
-        ],
-        "tooltip-format": "Brightness"
+    "clock#day": {
+        "interval": 360,
+        "format": "{:%a}"
+    },
+    
+    "pulseaudio#icon": {
+        "scroll-step": 3,
+        "format": "{icon}",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphone": "󱡒",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pactl set-sink-volume @DEFAULT_SINK@ 0%",
+        "on-click-right": "pavucontrol",
+		"tooltip-format": "{volume}%"
     },
 
-    "pulseaudio": {
-        "scroll-step": 5,
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "<span foreground='#00BCD4'>   </span>",
-        "format-icons": {
-            "headphone": "<span foreground='#00BCD4'></span>",
-            "hands-free": "<span foreground='#00BCD4'></span>",
-            "headset": "<span foreground='#00BCD4'></span>",
-            "phone": "<span foreground='#00BCD4'></span>",
-            "portable": "<span foreground='#00BCD4'></span>",
-            "car": "<span foreground='#00BCD4'></span>",
-            "default": "<span foreground='#00BCD4'></span>"
-        },
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-click-right": "pavucontrol",
-        "tooltip-format": "Speaker"
+    "pulseaudio#volume": {
+        "format": "{volume}",
+        "tooltip": false
+    },
+
+    "backlight#icon": {
+        "scroll-step": 3,
+        "format": "{icon}",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+		"tooltip-format": "{percent}%"
+    },
+
+    "backlight#percent": {
+        "format": "{percent}",
+        "tooltip": false
     },
 
     "custom/wlogout": {
-        "format": "<span foreground='#FFC0CB'>  </span>",
+        "format": "⏻",
         "interval": "once",
-        "on-click": "wlogout -c 7 -r 7 -p layer-shell",
-    }
+        "on-click": "wlogout -c 10 -r 10 -p layer-shell",
+        "tooltip": false
+   }
 }
