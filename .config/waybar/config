@@ -14,16 +14,10 @@
         "all-outputs": true
     },
      
-    "hyprland/window": {
-        "format": "<span font='10' font-weight='bold'>    {}</span>",
-        "max-length": 90,
-        "separate-outputs": true
-    },
-
     "clock#time": {
         "interval": 60,
         "format": "{:%I\n%M\n%p}",
-        "on-click-right": "~/GitHub/scripts/fix_clock.py",
+        "on-click-right": "~/GitHub/scripts/fix-clock.sh",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
