@@ -1,5 +1,6 @@
 OS: [Arch Linux](https://archlinux.org/)
 
+Protocol: [Wayland](https://wayland.freedesktop.org/)\
 Window Manager: [Hyprland](https://hyprland.org/)\
 Bar: [Waybar](https://github.com/Alexays/Waybar)\
 Logout Menu: [Wlogout](https://github.com/ArtsyMacaw/wlogout)
