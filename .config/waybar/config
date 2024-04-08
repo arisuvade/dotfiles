@@ -17,7 +17,7 @@
     "clock#time": {
         "interval": 60,
         "format": "{:%I\n%M\n%p}",
-        "on-click-right": "~/GitHub/scripts/fix-clock.sh",
+        "on-click-right": "sudo /home/aries/GitHub/scripts/fix-clock.sh",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
