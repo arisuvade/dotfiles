@@ -54,8 +54,8 @@
         "format": "{icon}",
         "format-muted": "󰝟",
         "format-icons": {
-            "headphone": "󰋎",
-            "default": ["󰕿", "󰖀", "󰕾"]
+            "headphone": "󰋋",
+            "default": ["󰕾"]
         },
         "on-click": "pactl set-sink-volume @DEFAULT_SINK@ 0%",
         "on-click-right": "pavucontrol",
@@ -70,7 +70,7 @@
     "backlight#icon": {
         "scroll-step": 3,
         "format": "{icon}",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "format-icons": ["󰃠"],
 		"tooltip-format": "{percent}%"
     },
 

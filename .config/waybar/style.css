@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0px;
     font-family: FiraCode Nerd Font;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
     min-height: 0;
 }
@@ -58,7 +58,7 @@ button:hover {
 }
 
 #workspaces button.active {
-    background: #FFB0B0;
+    background: #B4B4B8;
     color: #191717;
     margin-left: 1px;
     padding-left: 5px;
@@ -67,7 +67,7 @@ button:hover {
 }
 
 #workspaces button.urgent {
-    background: #FC6736;
+    background: #B4B4B8;
     color: #000000;
     margin-left: 1px;
     padding-left: 5px;
@@ -105,36 +105,36 @@ tooltip label {
 }
 
 #clock.date {
-    color: #F9D949;
-    font-size: 14px;
-    margin-bottom: 15px;
+    color: #B4B4B8;
+    font-size: 18px;
+    margin-bottom: 12px;
     font-family: Noto Sans;
 }
 
 #clock.time {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 #clock.day {
-    margin-top: 15px;
-    color: #F9D949;
-    font-size: 14px;
-    margin-bottom: 90px;
+    margin-top: 12px;
+    color: #B4B4B8;
+    font-size: 18px;
+    margin-bottom: 65px;
 }
 
 #pulseaudio.icon {
-    margin-right: 2px;
+    margin-right: 3px;
     color: #B4B4B8;
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: -4px;
 }
 
 #pulseaudio.muted {
     margin-right: 2px;
     color: #FC6736;
-    font-size: 24px;
-    margin-bottom: -4px;
+    font-size: 30px;
+    margin-bottom: -5px;
 }
 
 #pulseaudio.volume {
@@ -143,18 +143,18 @@ tooltip label {
     margin-bottom: 1px;
     color: #B4B4B8;
     font-family: Noto Sans;
-    font-size: 13px;
+    font-size: 16px;
 
-    background: #FC6736;
+    background: #B4B4B8;
     color: #000000;
     border-radius: 6px 0px 0px 6px;
 }
 
 #backlight.icon {
-    margin-right: 6px;
+    margin-right: 10px;
     color: #B4B4B8;
-    font-size: 24px;
-    margin-bottom: -4px;
+    font-size: 30px;
+    margin-bottom: -5px;
 }
 
 #backlight.percent {
@@ -163,19 +163,19 @@ tooltip label {
     color: #B4B4B8;
     font-size: 11px;
     font-family: Noto Sans;
-    font-size: 13px;
+    font-size: 16px;
 
-    background: #FC6736;
+    background: #B4B4B8;
     color: #000000;
     border-radius: 6px 0px 0px 6px;
 }
 
 #custom-wlogout {
     margin-top: 4px;
-    margin-right: 4px;
-    color: #FE0000;
-    font-size: 24px;
-    margin-bottom: 4px;
+    margin-right: 6px;
+    color: #B4B4B8;
+    font-size: 30px;
+    margin-bottom: 1px;
 }
 
 @keyframes blink {
