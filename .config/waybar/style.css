@@ -37,7 +37,6 @@ button:hover {
 	text-shadow: none;
     padding: 0px;
     border-radius: 5px 0px 0px 5px;
-    margin-top: 3px;
     margin-bottom: 3px;
     margin-left: 0px;
     padding-left: 3px;
@@ -78,9 +77,7 @@ button:hover {
 
 tooltip {
     border-radius: 8px;
-    padding: 1px;
-    background: alpha(#222222, 1);
-    color: lighter(#333333);
+    background: alpha(#222222, 0.8);
 }
 
 tooltip label {
@@ -107,15 +104,23 @@ tooltip label {
     margin-right: 0;
 }
 
+#clock.date {
+    color: #F9D949;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-family: Noto Sans;
+}
+
 #clock.time {
     color: #ffffff;
     font-size: 20px;
-    margin-bottom: -4px;
 }
 
 #clock.day {
-    color: #ffffff;
+    margin-top: 15px;
+    color: #F9D949;
     font-size: 14px;
+    margin-bottom: 90px;
 }
 
 #pulseaudio.icon {
@@ -128,6 +133,8 @@ tooltip label {
 #pulseaudio.muted {
     margin-right: 2px;
     color: #FC6736;
+    font-size: 24px;
+    margin-bottom: -4px;
 }
 
 #pulseaudio.volume {
@@ -144,7 +151,7 @@ tooltip label {
 }
 
 #backlight.icon {
-    margin-right: 0.2em;
+    margin-right: 6px;
     color: #B4B4B8;
     font-size: 24px;
     margin-bottom: -4px;
@@ -165,8 +172,8 @@ tooltip label {
 
 #custom-wlogout {
     margin-top: 4px;
-    margin-right: 3px;
-    color: #B31312;
+    margin-right: 4px;
+    color: #FE0000;
     font-size: 24px;
     margin-bottom: 4px;
 }
