@@ -88,7 +88,9 @@ tooltip label {
 #clock,
 #backlight,
 #pulseaudio,
-#wlogout,
+#custom-shutdown,
+#custom-reboot,
+#custom-logout,
 
 #workspaces {
     margin: 0 0px;
@@ -120,7 +122,7 @@ tooltip label {
     margin-top: 12px;
     color: #B4B4B8;
     font-size: 18px;
-    margin-bottom: 65px;
+    margin-bottom: 35px;
 }
 
 #pulseaudio.icon {
@@ -170,12 +172,23 @@ tooltip label {
     border-radius: 6px 0px 0px 6px;
 }
 
-#custom-wlogout {
-    margin-top: 4px;
+#custom-shutdown {
     margin-right: 6px;
     color: #B4B4B8;
-    font-size: 30px;
-    margin-bottom: 1px;
+    font-size: 32px;
+
+}
+
+#custom-reboot {
+    margin-right: 2px;
+    color: #B4B4B8;
+    font-size: 38px;
+}
+
+#custom-logout {
+    margin-right: 5px;
+    color: #B4B4B8;
+    font-size: 32px;
 }
 
 @keyframes blink {

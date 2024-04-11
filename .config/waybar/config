@@ -1,17 +1,23 @@
 {
     "height": 0,
-    "spacing": 17,
+    "spacing": 12,
     "position": "right",
     "reload_style_on_change": true,
 
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock#date", "clock#time", "clock#day"],
-    "modules-right": ["pulseaudio#icon", "pulseaudio#volume", "backlight#icon", "backlight#percent", "custom/wlogout"],
+    "modules-right": ["pulseaudio#icon", "pulseaudio#volume", "backlight#icon", "backlight#percent", "group/powermenu"],
 
     "hyprland/workspaces": {
-        "format": "{}",
+        "format": "{icon}",
+        "format-icons": {
+            "default": "󰊠",
+            "active": "󰮯",
+            "urgent": "󰧵"
+        },
         "on-click": "activate",
-        "all-outputs": true
+        "all-outputs": true,
+        "sort-by-number": true
     },
 
     "clock#date": {
@@ -59,7 +65,7 @@
         },
         "on-click": "pactl set-sink-volume @DEFAULT_SINK@ 0%",
         "on-click-right": "pavucontrol",
-		"tooltip-format": "{volume}%"
+        "tooltip": false
     },
 
     "pulseaudio#volume": {
@@ -71,7 +77,7 @@
         "scroll-step": 3,
         "format": "{icon}",
         "format-icons": ["󰃠"],
-		"tooltip-format": "{percent}%"
+        "tooltip": false
     },
 
     "backlight#percent": {
@@ -79,10 +85,38 @@
         "tooltip": false
     },
 
-    "custom/wlogout": {
-        "format": "⏻",
+    "group/powermenu":  {
+        "orientation": "vertical",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "not-power",
+            "transition-left-to-right": true
+        },
+		"modules": [
+			"custom/shutdown",
+			"custom/reboot",
+			"custom/logout"
+		]
+    },
+
+    "custom/shutdown": {
+        "format": "",
         "interval": "once",
-        "on-click": "wlogout -c 10 -r 10 -p layer-shell",
+        "on-click": "sudo /home/aries/GitHub/scripts/bios-boot.sh on; sleep 1; systemctl poweroff",
         "tooltip": false
-   }
+   },
+
+   "custom/reboot": {
+        "format": "󰜉",
+        "interval": "once",
+        "on-click": "sudo /home/aries/GitHub/scripts/bios-boot.sh off; sleep 1; systemctl reboot",
+        "tooltip": false
+    },
+
+    "custom/logout": {
+        "format": "󰿅",
+        "interval": "once",
+        "on-click": "sleep 1; kill -9 -1",
+        "tooltip": false
+    }
 }
