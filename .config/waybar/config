@@ -4,9 +4,9 @@
     "position": "right",
     "reload_style_on_change": true,
 
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["group/powermenu", "hyprland/workspaces"],
     "modules-center": ["clock#date", "clock#time", "clock#day"],
-    "modules-right": ["pulseaudio#icon", "pulseaudio#volume", "backlight#icon", "backlight#percent", "group/powermenu"],
+    "modules-right": ["pulseaudio#icon", "pulseaudio#volume", "backlight#icon", "backlight#percent" ],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -14,6 +14,12 @@
             "default": "󰊠",
             "active": "󰮯",
             "urgent": "󰧵"
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
         },
         "on-click": "activate",
         "all-outputs": true,
@@ -86,37 +92,44 @@
     },
 
     "group/powermenu":  {
-        "orientation": "vertical",
+        "orientation": "inherit",
         "drawer": {
-            "transition-duration": 500,
-            "children-class": "not-power",
+            "transition-duration": 350,
             "transition-left-to-right": true
         },
 		"modules": [
 			"custom/shutdown",
 			"custom/reboot",
-			"custom/logout"
+			"custom/logout",
+            "custom/suspend"
 		]
     },
 
     "custom/shutdown": {
         "format": "",
         "interval": "once",
-        "on-click": "sudo /home/aries/GitHub/scripts/bios-boot.sh on; sleep 1; systemctl poweroff",
+        "on-click": "sudo /home/aries/GitHub/scripts/bios-boot.sh on; sleep 1.5; systemctl poweroff",
         "tooltip": false
    },
 
    "custom/reboot": {
-        "format": "󰜉",
+        "format": "",
         "interval": "once",
-        "on-click": "sudo /home/aries/GitHub/scripts/bios-boot.sh off; sleep 1; systemctl reboot",
+        "on-click": "sudo /home/aries/GitHub/scripts/bios-boot.sh off; sleep 1.5; systemctl reboot",
         "tooltip": false
     },
 
     "custom/logout": {
         "format": "󰿅",
         "interval": "once",
-        "on-click": "sleep 1; kill -9 -1",
+        "on-click": "sleep 1.5; kill -9 -1",
+        "tooltip": false
+    },
+
+    "custom/suspend": {
+        "format": "󰏦",
+        "interval": "once",
+        "on-click": "sleep 1.5; systemctl suspend",
         "tooltip": false
     }
 }

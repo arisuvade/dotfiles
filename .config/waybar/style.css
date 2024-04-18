@@ -41,7 +41,7 @@ button:hover {
     margin-left: 0px;
     padding-left: 3px;
     padding-right: 3px;
-    margin-right: 0px;
+    margin-right: 2px;
     color:#ffffff;
     animation: ws_normal 20s ease-in-out 1;
 }
@@ -61,8 +61,8 @@ button:hover {
     background: #B4B4B8;
     color: #191717;
     margin-left: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 0px;
+    padding-right: 2px;
     margin-right: 1px;
 }
 
@@ -107,7 +107,8 @@ tooltip label {
 }
 
 #clock.date {
-    color: #B4B4B8;
+    margin-top: 26px;
+    color: #C7C8CC;
     font-size: 18px;
     margin-bottom: 12px;
     font-family: Noto Sans;
@@ -120,9 +121,8 @@ tooltip label {
 
 #clock.day {
     margin-top: 12px;
-    color: #B4B4B8;
+    color: #C7C8CC;
     font-size: 18px;
-    margin-bottom: 35px;
 }
 
 #pulseaudio.icon {
@@ -130,13 +130,6 @@ tooltip label {
     color: #B4B4B8;
     font-size: 30px;
     margin-bottom: -4px;
-}
-
-#pulseaudio.muted {
-    margin-right: 2px;
-    color: #FC6736;
-    font-size: 30px;
-    margin-bottom: -5px;
 }
 
 #pulseaudio.volume {
@@ -163,29 +156,36 @@ tooltip label {
     margin-left: 1px;
     margin-top: -3px;
     color: #B4B4B8;
-    font-size: 11px;
     font-family: Noto Sans;
     font-size: 16px;
 
     background: #B4B4B8;
     color: #000000;
     border-radius: 6px 0px 0px 6px;
+
+    margin-bottom: 2px;
 }
 
 #custom-shutdown {
-    margin-right: 6px;
+    margin-right: 8px;
     color: #B4B4B8;
-    font-size: 32px;
+    font-size: 28px;
 
 }
 
 #custom-reboot {
-    margin-right: 2px;
+    margin-right: 4px;
     color: #B4B4B8;
-    font-size: 38px;
+    font-size: 34px;
 }
 
 #custom-logout {
+    margin-right: 5px;
+    color: #B4B4B8;
+    font-size: 32px;
+}
+
+#custom-suspend {
     margin-right: 5px;
     color: #B4B4B8;
     font-size: 32px;
