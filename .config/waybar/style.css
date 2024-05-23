@@ -106,8 +106,46 @@ tooltip label {
     margin-right: 0;
 }
 
+#backlight.icon {
+    margin-top: -4px;
+    margin-right: 10px;
+    color: #B4B4B8;
+    font-size: 30px;
+    margin-bottom: -12px;
+}
+
+#backlight.percent {
+    margin-left: 1px;
+    color: #B4B4B8;
+    font-family: Noto Sans;
+    font-size: 16px;
+    background: #B4B4B8;
+    color: #000000;
+    border-radius: 6px 0px 0px 6px;
+}
+
+#pulseaudio.icon {
+    margin-top: -4px;
+    margin-right: 3px;
+    color: #B4B4B8;
+    font-size: 30px;
+    margin-bottom: -8px;
+}
+
+#pulseaudio.volume {
+    margin-top: -6px;
+    margin-left: 1px;
+    color: #B4B4B8;
+    font-family: Noto Sans;
+    font-size: 16px;
+    background: #B4B4B8;
+    color: #000000;
+    border-radius: 6px 0px 0px 6px;
+    margin-bottom: 14px;
+}
+
 #clock.date {
-    margin-top: 26px;
+    margin-top: 32px;
     color: #C7C8CC;
     font-size: 18px;
     margin-bottom: 12px;
@@ -125,58 +163,10 @@ tooltip label {
     font-size: 18px;
 }
 
-#pulseaudio.icon {
-    margin-right: 3px;
+#custom-suspend {
+    margin-right: 5px;
     color: #B4B4B8;
-    font-size: 30px;
-    margin-bottom: -4px;
-}
-
-#pulseaudio.volume {
-    margin-left: 1px;
-    margin-top: -2px;
-    margin-bottom: 1px;
-    color: #B4B4B8;
-    font-family: Noto Sans;
-    font-size: 16px;
-
-    background: #B4B4B8;
-    color: #000000;
-    border-radius: 6px 0px 0px 6px;
-}
-
-#backlight.icon {
-    margin-right: 10px;
-    color: #B4B4B8;
-    font-size: 30px;
-    margin-bottom: -5px;
-}
-
-#backlight.percent {
-    margin-left: 1px;
-    margin-top: -3px;
-    color: #B4B4B8;
-    font-family: Noto Sans;
-    font-size: 16px;
-
-    background: #B4B4B8;
-    color: #000000;
-    border-radius: 6px 0px 0px 6px;
-
-    margin-bottom: 2px;
-}
-
-#custom-shutdown {
-    margin-right: 8px;
-    color: #B4B4B8;
-    font-size: 28px;
-
-}
-
-#custom-reboot {
-    margin-right: 4px;
-    color: #B4B4B8;
-    font-size: 34px;
+    font-size: 32px;
 }
 
 #custom-logout {
@@ -185,10 +175,16 @@ tooltip label {
     font-size: 32px;
 }
 
-#custom-suspend {
-    margin-right: 5px;
+#custom-reboot {
+    margin-right: 4px;
     color: #B4B4B8;
-    font-size: 32px;
+    font-size: 34px;
+}
+
+#custom-shutdown {
+    margin-right: 8px;
+    color: #B4B4B8;
+    font-size: 28px;
 }
 
 @keyframes blink {
