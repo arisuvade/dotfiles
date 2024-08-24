@@ -119,7 +119,7 @@
    "custom/reboot": {
         "format": "",
         "interval": "once",
-        "on-click": "sleep 1; systemctl reboot",
+        "on-click": "sudo /home/aries/GitHub/scripts/bios-boot.sh off; sleep 1; systemctl reboot",
         "tooltip": false
     },
 
