@@ -32,7 +32,7 @@
 
     "clock#date": {
         "interval": 60,
-        "format": "{:%B %d}",
+        "format": "{:%b %d}",
         "rotate": 270
     },
      
@@ -61,7 +61,7 @@
 
     "clock#day": {
         "interval": 60,
-        "format": "{:%A}",
+        "format": "{:%a}",
         "rotate": 270
     },
 
