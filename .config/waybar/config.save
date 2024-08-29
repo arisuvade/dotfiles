@@ -34,24 +34,7 @@
         "interval": 60,
         "format": "{:%b %d}",
         "rotate": 270,
-        "on-click-right": "sudo /home/aries/GitHub/scripts/fix-clock.sh",
-        "tooltip-format": "<tt>{calendar}</tt>",
-        "calendar": {
-            "mode": "month",
-            "mode-mon-col": 3,
-            "on-scroll": 1,
-            "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "weekdays": "<span color='#00BCD4'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b>{}</b></span>"
-            }
-        },
-        "actions": {
-            "on-click-forward": "tz_down",
-            "on-click-backward": "tz_up",
-            "on-scroll-up": "shift_down",
-            "on-scroll-down": "shift_up"
-        }
+        
     },
      
     "clock#time": {
@@ -76,7 +59,7 @@
             "on-scroll-down": "shift_up"
         }
     },
-
+    
     "clock#day": {
         "interval": 60,
         "format": "{:%a}",
@@ -98,7 +81,7 @@
             "on-click-backward": "tz_up",
             "on-scroll-up": "shift_down",
             "on-scroll-down": "shift_up"
-        }        
+        }
     },
 
     "pulseaudio#icon": {
@@ -149,31 +132,27 @@
         "format": "",
         "interval": "once",
         "on-click": "sudo /home/aries/GitHub/scripts/bios-boot.sh on; sleep 1; systemctl poweroff",
-        "tooltip": true,
-        "tooltip-format": "Shutdown"
+        "tooltip": false
    },
 
    "custom/reboot": {
         "format": "",
         "interval": "once",
         "on-click": "sudo /home/aries/GitHub/scripts/bios-boot.sh off; sleep 1; systemctl reboot",
-        "tooltip": true,
-        "tooltip-format": "Reboot"
+        "tooltip": false
     },
 
     "custom/logout": {
         "format": "󰿅",
         "interval": "once",
         "on-click": "sleep 1; kill -9 -1",
-        "tooltip": true,
-        "tooltip-format": "Logout"
+        "tooltip": false
     },
 
     "custom/suspend": {
         "format": "󰏦",
         "interval": "once",
         "on-click": "sleep 1; systemctl suspend",
-        "tooltip": true,
-        "tooltip-format": "Suspend"
+        "tooltip": false
     }
 }
