@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0px;
     font-family: FiraCode Nerd Font;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
     min-height: 0;
 }
@@ -46,18 +46,18 @@ button:hover {
 }
 
 #workspaces button:hover {
-    background: #B4B4B8;
-    color: #191717;
+    background: #8A2BE2;
+    color: #FFFFFF;
     margin-left: 1px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 0px;
+    padding-right: 2px;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button.active {
-    background: #00FFFF;
-    color: #191717;
+    background: #FF69B4;
+    color: #000000;
     margin-left: 1px;
     padding-left: 0px;
     padding-right: 2px;
@@ -125,7 +125,7 @@ tooltip label {
     margin-top: -4px;
     margin-right: 3px;
     color: #00FFFF;
-    font-size: 34px;
+    font-size: 32px;
     margin-bottom: -8px;
 }
 
@@ -134,7 +134,7 @@ tooltip label {
     margin-left: 1px;
     color: #B4B4B8;
     font-family: Noto Sans;
-    font-size: 18px;
+    font-size: 16px;
     background: #00FFFF;
     color: #000000;
     border-radius: 6px 0px 0px 6px;
@@ -144,44 +144,44 @@ tooltip label {
 #clock.date {
     margin-top: 60px;
     color: #C7C8CC;
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 12px;
     font-family: Noto Sans;
 }
 
 #clock.time {
     color: #ffffff;
-    font-size: 26px;
+    font-size: 24px;
 }
 
 #clock.day {
     margin-top: 12px;
     color: #C7C8CC;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 #custom-suspend {
     margin-right: 7px;
-    color: #00FFFF;
-    font-size: 36px;
+    color: #9370DB;
+    font-size: 34px;
 }
 
 #custom-logout {
     margin-right: 5px;
-    color: #00FFFF;
-    font-size: 36px;
+    color: #4682B4;
+    font-size: 34px;
 }
 
 #custom-reboot {
     margin-right: 4px;
-    color: #00FFFF;
-    font-size: 38px;
+    color: #FFBF00;
+    font-size: 36px;
 }
 
 #custom-shutdown {
     margin-right: 9px;
-    color: #00FFFF;
-    font-size: 31px;
+    color: #B22222;
+    font-size: 29px;
 }
 
 @keyframes blink {
