@@ -9,7 +9,7 @@
     "modules-right": ["tray", "group/powermenu"],
 
     "hyprland/workspaces": {
-        "format": "{icon}",
+        "format": "{}",
         "format-icons": {
             "default": "󰊠",
             "active": "󰮯",
@@ -19,7 +19,7 @@
             "1": [],
             "2": [],
             "3": [],
-            "4": []
+            "4": [],
         },
         "on-click": "activate",
         "all-outputs": true,
@@ -32,7 +32,7 @@
 
     "clock#date": {
         "interval": 60,
-        "format": "{:%b %d}",
+        "format": "{:%B %d}",
         "rotate": 270,
         "on-click-right": "sudo /home/aries/GitHub/scripts/fix-clock.sh",
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -79,7 +79,7 @@
 
     "clock#day": {
         "interval": 60,
-        "format": "{:%a}",
+        "format": "{:%A}",
         "rotate": 270,
         "on-click-right": "sudo /home/aries/GitHub/scripts/fix-clock.sh",
         "tooltip-format": "<tt>{calendar}</tt>",

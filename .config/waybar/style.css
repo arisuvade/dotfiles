@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0px;
     font-family: FiraCode Nerd Font;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: bold;
     min-height: 0;
 }
@@ -41,7 +41,6 @@ button:hover {
     margin-left: 0px;
     padding-left: 3px;
     padding-right: 3px;
-    margin-right: 2px;
     color:#ffffff;
     animation: ws_normal 20s ease-in-out 1;
 }
@@ -52,18 +51,16 @@ button:hover {
     margin-left: 1px;
     padding-left: 5px;
     padding-right: 5px;
-    margin-right: 1px;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button.active {
-    background: #B4B4B8;
+    background: #00FFFF;
     color: #191717;
     margin-left: 1px;
     padding-left: 0px;
     padding-right: 2px;
-    margin-right: 1px;
 }
 
 #workspaces button.urgent {
@@ -127,8 +124,8 @@ tooltip label {
 #pulseaudio.icon {
     margin-top: -4px;
     margin-right: 3px;
-    color: #B4B4B8;
-    font-size: 30px;
+    color: #00FFFF;
+    font-size: 34px;
     margin-bottom: -8px;
 }
 
@@ -137,8 +134,8 @@ tooltip label {
     margin-left: 1px;
     color: #B4B4B8;
     font-family: Noto Sans;
-    font-size: 16px;
-    background: #B4B4B8;
+    font-size: 18px;
+    background: #00FFFF;
     color: #000000;
     border-radius: 6px 0px 0px 6px;
     margin-bottom: 14px;
@@ -147,44 +144,44 @@ tooltip label {
 #clock.date {
     margin-top: 60px;
     color: #C7C8CC;
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 12px;
     font-family: Noto Sans;
 }
 
 #clock.time {
     color: #ffffff;
-    font-size: 22px;
+    font-size: 26px;
 }
 
 #clock.day {
     margin-top: 12px;
     color: #C7C8CC;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 #custom-suspend {
-    margin-right: 5px;
-    color: #B4B4B8;
-    font-size: 32px;
+    margin-right: 7px;
+    color: #00FFFF;
+    font-size: 36px;
 }
 
 #custom-logout {
     margin-right: 5px;
-    color: #B4B4B8;
-    font-size: 32px;
+    color: #00FFFF;
+    font-size: 36px;
 }
 
 #custom-reboot {
     margin-right: 4px;
-    color: #B4B4B8;
-    font-size: 34px;
+    color: #00FFFF;
+    font-size: 38px;
 }
 
 #custom-shutdown {
-    margin-right: 8px;
-    color: #B4B4B8;
-    font-size: 28px;
+    margin-right: 9px;
+    color: #00FFFF;
+    font-size: 31px;
 }
 
 @keyframes blink {
