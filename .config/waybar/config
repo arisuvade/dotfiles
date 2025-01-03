@@ -4,13 +4,17 @@
     "position": "right",
     "reload_style_on_change": true,
 
-    "modules-left": ["backlight#icon", "backlight#percent", "pulseaudio#icon", "pulseaudio#volume", "hyprland/workspaces"],
-    "modules-center": ["clock#date", "clock#time", "clock#day"],
+    "modules-left": ["pulseaudio#icon", "pulseaudio#volume", "hyprland/workspaces"],
+    "modules-center": ["clock#day", "clock#time", "clock#date"],
     "modules-right": ["tray", "group/powermenu"],
 
     "hyprland/workspaces": {
-        "format": "{}",
+        "format": "{icon}",
         "format-icons": {
+            "1": "󰊠",
+            "2": "󰊠",
+            "3": "󰊠",
+            "4": "󰊠",
             "default": "󰊠",
             "active": "󰮯",
             "urgent": "󰧵"
@@ -32,7 +36,7 @@
 
     "clock#date": {
         "interval": 60,
-        "format": "{:%B %d}",
+        "format": "{:%b %d}",
         "rotate": 270,
         "on-click-right": "sudo /home/aries/GitHub/scripts/fix-clock.sh",
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -79,7 +83,7 @@
 
     "clock#day": {
         "interval": 60,
-        "format": "{:%A}",
+        "format": "{:%a}",
         "rotate": 270,
         "on-click-right": "sudo /home/aries/GitHub/scripts/fix-clock.sh",
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -102,11 +106,10 @@
     },
 
     "pulseaudio#icon": {
-        "scroll-step": 3,
+        "scroll-step": 5,
         "format": "{icon}",
         "format-muted": "󰝟",
         "format-icons": {
-            "headphone": "󰋋",
             "default": ["󰕾"]
         },
         "on-click": "pactl set-sink-volume @DEFAULT_SINK@ 0%",
@@ -119,15 +122,12 @@
         "tooltip": false
     },
 
-    "backlight#icon": {
-        "scroll-step": 3,
+    "custom/brightness": {
+        "on-scroll-up": "/home/aries/GitHub/scripts/brightness/increase-brightness.sh 5",
+        "on-scroll-down": "/home/aries/GitHub/scripts/brightness/decrease-brightness.sh 5",
+        "interval": "once",
         "format": "{icon}",
         "format-icons": ["󰃠"],
-        "tooltip": false
-    },
-
-    "backlight#percent": {
-        "format": "{percent}",
         "tooltip": false
     },
 
@@ -139,6 +139,7 @@
         },
 		"modules": [
 			"custom/shutdown",
+			"custom/sleep",
 			"custom/suspend",
 			"custom/logout",
 			"custom/reboot"
@@ -148,32 +149,35 @@
     "custom/shutdown": {
         "format": "",
         "interval": "once",
-        "on-click": "sudo /home/aries/GitHub/scripts/bios-boot.sh on; sleep 1; systemctl poweroff",
-        "tooltip": true,
-        "tooltip-format": "Shutdown"
-   },
+        "on-click": "sleep 1; systemctl poweroff",
+        "tooltip": false
+    },
 
-   "custom/reboot": {
+    "custom/reboot": {
         "format": "",
         "interval": "once",
-        "on-click": "sudo /home/aries/GitHub/scripts/bios-boot.sh off; sleep 1; systemctl reboot",
-        "tooltip": true,
-        "tooltip-format": "Reboot"
+        "on-click": "sleep 1; systemctl reboot",
+        "tooltip": false
     },
 
     "custom/logout": {
         "format": "󰿅",
         "interval": "once",
         "on-click": "sleep 1; kill -9 -1",
-        "tooltip": true,
-        "tooltip-format": "Logout"
+        "tooltip": false
     },
 
     "custom/suspend": {
         "format": "󰏦",
         "interval": "once",
         "on-click": "sleep 1; systemctl suspend",
-        "tooltip": true,
-        "tooltip-format": "Suspend"
+        "tooltip": false
+    },
+
+    "custom/sleep": {
+        "format": "󰤄",
+        "interval": "once",
+        "on-click": "sleep 1; hyprctl dispatch dpms off",
+        "tooltip": false
     }
 }

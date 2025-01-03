@@ -56,17 +56,17 @@ window {
     location:                    north;
     anchor:                      center;
     fullscreen:                  false;
-    height:                      42%;
-    width:                       23%;
+    height:                      41%;
+    width:                       22%;
     x-offset:                    0px;
-    y-offset:                    20%;
+    y-offset:                    22%;
 
     /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               18px;
     border-color:                @border-colour;
     cursor:                      "default";
     /* Backgroud Colors */
@@ -157,7 +157,7 @@ case-indicator {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       4;
+    lines:                       6;
     cycle:                       false;
     dynamic:                     true;
     scrollbar:                   true;

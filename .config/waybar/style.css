@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: FiraCode Nerd Font;
+    font-family: MesloLGS Nerd Font;
     font-size: 24px;
     font-weight: bold;
     min-height: 0;
@@ -10,7 +10,7 @@
 window#waybar {
     transition-property: background-color;
     transition-duration: 0.5s;
-    background: alpha(#222222, 1);
+    background: alpha(#222222, 0); 
     color: lighter(#333333);
 }
 
@@ -38,7 +38,7 @@ button:hover {
     padding: 0px;
     border-radius: 5px 0px 0px 5px;
     margin-bottom: 3px;
-    margin-left: 0px;
+    margin-right: 1px;
     padding-left: 3px;
     padding-right: 3px;
     color:#ffffff;
@@ -56,9 +56,9 @@ button:hover {
 }
 
 #workspaces button.active {
-    background: #FF69B4;
-    color: #000000;
-    margin-left: 1px;
+    background: #444444;
+    color: #FFFF00;
+    margin-left: 0px;
     padding-left: 0px;
     padding-right: 2px;
 }
@@ -70,6 +70,22 @@ button:hover {
     padding-left: 5px;
     padding-right: 5px;
     margin-right: 1px;
+}
+
+#workspaces button:nth-child(1) {
+    color: red;
+}
+#workspaces button:nth-child(2) {
+    color: pink;
+}
+#workspaces button:nth-child(3) {
+    color: cyan;
+}
+#workspaces button:nth-child(4) {
+    color: orange;
+}
+#workspaces button.active {
+    color: #FFFF00; /* Pac-Man Yellow for the active workspace */
 }
 
 tooltip {
@@ -103,24 +119,6 @@ tooltip label {
     margin-right: 0;
 }
 
-#backlight.icon {
-    margin-top: -4px;
-    margin-right: 10px;
-    color: #B4B4B8;
-    font-size: 30px;
-    margin-bottom: -12px;
-}
-
-#backlight.percent {
-    margin-left: 1px;
-    color: #B4B4B8;
-    font-family: Noto Sans;
-    font-size: 16px;
-    background: #B4B4B8;
-    color: #000000;
-    border-radius: 6px 0px 0px 6px;
-}
-
 #pulseaudio.icon {
     margin-top: -4px;
     margin-right: 3px;
@@ -138,15 +136,13 @@ tooltip label {
     background: #00FFFF;
     color: #000000;
     border-radius: 6px 0px 0px 6px;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
 }
 
 #clock.date {
-    margin-top: 60px;
     color: #C7C8CC;
     font-size: 20px;
-    margin-bottom: 12px;
-    font-family: Noto Sans;
+    margin-top: 12px;
 }
 
 #clock.time {
@@ -155,33 +151,39 @@ tooltip label {
 }
 
 #clock.day {
-    margin-top: 12px;
+    margin-bottom: 12px;
     color: #C7C8CC;
     font-size: 20px;
+}
+
+#custom-sleep {
+    color: #90EE90;
+    font-size: 30px;
 }
 
 #custom-suspend {
     margin-right: 7px;
     color: #9370DB;
-    font-size: 34px;
+    font-size: 31px;
 }
 
 #custom-logout {
-    margin-right: 5px;
+    margin-right: 7px;
     color: #4682B4;
-    font-size: 34px;
+    font-size: 32px;
 }
 
 #custom-reboot {
-    margin-right: 4px;
+    margin-right: 5px;
     color: #FFBF00;
-    font-size: 36px;
+    font-size: 33px;
 }
 
 #custom-shutdown {
-    margin-right: 9px;
+    margin-right: 7px;
     color: #B22222;
-    font-size: 29px;
+    font-size: 30px;
+    margin-bottom: -3px;
 }
 
 @keyframes blink {
