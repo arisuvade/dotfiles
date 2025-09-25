@@ -4,26 +4,22 @@
     "position": "right",
     "reload_style_on_change": true,
 
-    "modules-left": ["pulseaudio#icon", "pulseaudio#volume", "hyprland/workspaces"],
+    "modules-left": ["custom/brightness", "custom/brightness_percent","pulseaudio#icon", "pulseaudio#volume", "hyprland/workspaces"],
     "modules-center": ["clock#day", "clock#time", "clock#date"],
-    "modules-right": ["tray", "group/powermenu"],
+    "modules-right": ["tray", "custom/cpu_temp", "custom/gpu_temp", "custom/logout", "custom/reboot", "custom/shutdown"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "1": "󰊠",
-            "2": "󰊠",
-            "3": "󰊠",
-            "4": "󰊠",
-            "default": "󰊠",
-            "active": "󰮯",
-            "urgent": "󰧵"
+            "default": "",
+            "active": "",
+            "urgent": ""
         },
         "persistent-workspaces": {
             "1": [],
             "2": [],
             "3": [],
-            "4": [],
+            "4": []
         },
         "on-click": "activate",
         "all-outputs": true,
@@ -31,46 +27,32 @@
     },
 
     "tray": {
-        "icon-size": 18
+        "icon-size": 24,
+        "spacing": 6,
+        "icons": {
+            "qBittorrent": "/home/aries/.local/share/icons/hicolor/16x16/apps/qbittorrent.png",
+            "Meeting": "/home/aries/.local/share/icons/hicolor/16x16/apps/zoom.png"
+        }
     },
 
     "clock#date": {
         "interval": 60,
-        "format": "{:%b %d}",
-        "rotate": 270,
-        "on-click-right": "sudo /home/aries/GitHub/scripts/fix-clock.sh",
-        "tooltip-format": "<tt>{calendar}</tt>",
-        "calendar": {
-            "mode": "month",
-            "mode-mon-col": 3,
-            "on-scroll": 1,
-            "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "weekdays": "<span color='#00BCD4'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b>{}</b></span>"
-            }
-        },
-        "actions": {
-            "on-click-forward": "tz_down",
-            "on-click-backward": "tz_up",
-            "on-scroll-up": "shift_down",
-            "on-scroll-down": "shift_up"
-        }
+        "format": "{:%B %d}",
+        "rotate": 270
     },
      
     "clock#time": {
         "interval": 60,
         "format": "{:%I\n%M\n%p}",
-        "on-click-right": "sudo /home/aries/GitHub/scripts/fix-clock.sh",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
             "mode-mon-col": 3,
             "on-scroll": 1,
             "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "weekdays": "<span color='#00BCD4'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b>{}</b></span>"
+                "months": "<span color='#ffffff'><b>{}</b></span>",
+                "weekdays": "<span color='#ffffff'><b>{}</b></span>",
+                "today": "<span color='#ff0000'><b>{}</b></span>"
             }
         },
         "actions": {
@@ -83,26 +65,8 @@
 
     "clock#day": {
         "interval": 60,
-        "format": "{:%a}",
-        "rotate": 270,
-        "on-click-right": "sudo /home/aries/GitHub/scripts/fix-clock.sh",
-        "tooltip-format": "<tt>{calendar}</tt>",
-        "calendar": {
-            "mode": "month",
-            "mode-mon-col": 3,
-            "on-scroll": 1,
-            "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "weekdays": "<span color='#00BCD4'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b>{}</b></span>"
-            }
-        },
-        "actions": {
-            "on-click-forward": "tz_down",
-            "on-click-backward": "tz_up",
-            "on-scroll-up": "shift_down",
-            "on-scroll-down": "shift_up"
-        }        
+        "format": "{:%A}",
+        "rotate": 270
     },
 
     "pulseaudio#icon": {
@@ -113,7 +77,7 @@
             "default": ["󰕾"]
         },
         "on-click": "pactl set-sink-volume @DEFAULT_SINK@ 0%",
-        "on-click-right": "pavucontrol",
+        "on-click-right": "pavucontrol -t 3",
         "tooltip": false
     },
 
@@ -123,12 +87,33 @@
     },
 
     "custom/brightness": {
-        "on-scroll-up": "/home/aries/GitHub/scripts/brightness/increase-brightness.sh 5",
-        "on-scroll-down": "/home/aries/GitHub/scripts/brightness/decrease-brightness.sh 5",
+        "on-scroll-up": "/home/aries/Documents/scripts/brightness/increase-brightness.sh 5",
+        "on-scroll-down": "/home/aries/Documents/scripts/brightness/decrease-brightness.sh 5",
         "interval": "once",
         "format": "{icon}",
         "format-icons": ["󰃠"],
         "tooltip": false
+    },
+
+    "custom/brightness_percent": {
+        "exec": "cat /home/aries/Documents/scripts/brightness/get_brightness.txt",
+        "interval": 1,
+        "format": "{}",
+        "tooltip": false
+    },
+    
+    "custom/cpu_temp": {
+    	"exec": "sensors | grep 'Tctl' | awk '{printf \"%d\\n\", $2+0}'",
+        "interval": 5,
+        "format": "{}",
+        "tooltip-format": "CPU"
+    },
+
+    "custom/gpu_temp": {
+        "exec": "sensors | grep 'edge' | head -1 | awk '{print $2+0}'",
+        "interval": 5,
+        "format": "{}",
+        "tooltip-format": "GPU"
     },
 
     "group/powermenu":  {
@@ -146,38 +131,38 @@
 		]
     },
 
+    "custom/net_speed": {
+        "exec": "/home/aries/Documents/scripts/net_speed.sh",
+        "interval": 1,
+        "format": "{}",
+        "tooltip": false
+    },
+
     "custom/shutdown": {
         "format": "",
         "interval": "once",
-        "on-click": "sleep 1; systemctl poweroff",
-        "tooltip": false
+        "on-click": "~/.config/rofi/confirm-shutdown.sh",
+        "tooltip-format": "Shutdown"
     },
 
     "custom/reboot": {
         "format": "",
         "interval": "once",
-        "on-click": "sleep 1; systemctl reboot",
-        "tooltip": false
+        "on-click": "~/.config/rofi/confirm-reboot.sh",
+        "tooltip-format": "Reboot"
     },
 
     "custom/logout": {
         "format": "󰿅",
         "interval": "once",
-        "on-click": "sleep 1; kill -9 -1",
-        "tooltip": false
+        "on-click": "~/.config/rofi/confirm-logout.sh",
+        "tooltip-format": "Logout"
     },
 
-    "custom/suspend": {
-        "format": "󰏦",
+     "custom/sleep": {
+        "format": "󰤁",
         "interval": "once",
-        "on-click": "sleep 1; systemctl suspend",
-        "tooltip": false
-    },
-
-    "custom/sleep": {
-        "format": "󰤄",
-        "interval": "once",
-        "on-click": "sleep 1; hyprctl dispatch dpms off",
+        "on-click": "~/.config/rofi/confirm-sleep.sh",
         "tooltip": false
     }
 }

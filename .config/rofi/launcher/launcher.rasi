@@ -59,7 +59,7 @@ window {
     height:                      41%;
     width:                       22%;
     x-offset:                    0px;
-    y-offset:                    22%;
+    y-offset:                    16%;
 
     /* properties for all widgets */
     enabled:                     true;
@@ -178,7 +178,7 @@ listview {
 }
 scrollbar {
     handle-width:                5px ;
-    handle-color:                #FFC0CB;
+    handle-color:                #666666;
     border-radius:               10px;
     background-color:            @alternate-background;
 }
